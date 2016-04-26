@@ -6,12 +6,14 @@ from PIL import Image
 import caffe
 from collections import OrderedDict
 import math
+from math import fabs as abs
 import os
 import dlib
 import glob
 from skimage import io
 from pymatbridge import Matlab
 from PIL import Image
+import generate_matrix
 
 ############ HERE I ASK FOR THE IMAGES AND I PREPROCESS THEM
 ######## THE FINAL RESULT IS CONTAINED IN THE ARRAY ADDRESS_OF_IMAGES_OF_CRIMINAL
@@ -230,7 +232,7 @@ def preprocess(string):
         right_eye = shape.part(45)
         left_eye = [left_eye.x,left_eye.y]
         right_eye = [right_eye.x,right_eye.y]  
-        img = Image.open("face.png")          
+        img = Image.open(string)          
         CropFace(img, eye_left=left_eye, eye_right=right_eye, offset_pct=(0.20,0.20), dest_sz=(144,144)).save(string)
 
 ###### THOSE LINES WILL BE USED IN THE FINAL VERSION
@@ -242,57 +244,124 @@ cv2.namedWindow('Video',cv2.WINDOW_NORMAL)
 
 
 ###### WE HAVE TO PREPROCESS THE IMAGES OF THE CRIMINAL
-for i in range(0,len(address_of_images_of_criminal)-1):
-  preprocess(address_of_images_of_criminal[i])
+#for i in range(0,len(address_of_images_of_criminal)-1):
+  #preprocess(address_of_images_of_criminal[i])
 
 
 
 #### THIS LINES ARE JUST FOR THE DEMO
+frame_number = -1
 for i in range(0,330):
-	ret, frame = video_capture.read()
+    video_capture.read()
 
+width=int(video_capture.get(cv2.cv.CV_CAP_PROP_FRAME_WIDTH ))
+height=int(video_capture.get(cv2.cv.CV_CAP_PROP_FRAME_HEIGHT ))
+
+fourcc = cv2.cv.CV_FOURCC(*'XVID')
+out = cv2.VideoWriter('final_video/output.avi',fourcc, 20.0, (width,height))
+
+# MAIN LOOP
+
+font = cv2.FONT_HERSHEY_SIMPLEX
 criminal_face_number = 0
-while(video_capture.isOpened()):
-	# Capture frame-by-frame
-	ret, frame = video_capture.read()
-	gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-	faces = faceCascade.detectMultiScale(gray, scaleFactor=1.1,minNeighbors=5, minSize=(30, 30),flags=cv2.cv.CV_HAAR_SCALE_IMAGE)
-	print "**** NEW FRAME ****"
-# Draw a rectangle around the faces
-	i=0
-	for (x, y, w, h) in faces:
-		roi = frame[y:y+h, x:x+w]
-		### HERE MANY THINGS WILL BE MODIFIED
-		cv2.imwrite("face.png", roi)
-		feats = extract_feature(net, ["face.png"], 'prob', 1)
-		feats = feats[0]
-		preprocess("face.png")
-		print "**NEW_FACE**"
-		for i in range(0,len(features_criminal)):
-			is_criminal=0
-			print cosine_similarity(feats,features_criminal[i])
-			if (cosine_similarity(feats,features_criminal[i])>0.1308):
-				is_criminal = 1
-			if is_criminal==0:
-				cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
-			else:
-				print "CRIMINAL DETECTED"
-				roi = frame[y:y+h, x:x+w]
-				cv2.imwrite("detected/criminal"+str(criminal_face_number)+"Score"+str(cosine_similarity(feats,features_criminal[i]))+".png", roi)
-				criminal_face_number+=1
-				cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 0, 255), 2)
-				font = cv2.FONT_HERSHEY_SIMPLEX
-				cv2.putText(frame,'CRIMINAL DETECTED',(x,y), font, 2,(0,0,255))
-		os.remove("face.png")
-		i+=1
+array_of_faces = []
+array_of_faces_labeling = []
 
-	# Display the resulting frame
-	cv2.namedWindow('Video', cv2.WINDOW_NORMAL) 
-	cv2.imshow('Video', frame)
-	if cv2.waitKey(1) & 0xFF == ord('q'):
-		break
+while(video_capture.isOpened()):
+    frame_number+=1
+    ####### CURRENT FRAME := NEW FRAME ; FACE DETECTION ON THE CURRENT FRAME
+	# Capture frame-by-frame
+    ret, frame = video_capture.read()
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    cv2.imwrite("frame.png",gray)
+    print "**** NEW FRAME ****"
+    img = io.imread("frame.png")
+    # The 1 in the second argument indicates that we should upsample the image
+    # 1 time.  This will make everything bigger and allow us to detect more
+    # faces.
+    dets = detector(img, 1)
+    faces = []
+    #print("Number of faces detected: {}".format(len(dets)))
+    for _, d in enumerate(dets):
+        faces.append([d.left(),d.top(),d.right()-d.left(),d.bottom()-d.top()])
+    faces_size = len(faces)
+    array_of_faces.append(faces)
+    array_of_faces_labeling.append([0 for x in range(faces_size)])
+    happened = 0
+    distance = 0
+    k_best = 0
+    l_best = 0
+    border = 0
+    current_label = 0
+
+    #### FOR EACH FACE OF THE CURRENT FRAME
+    for i in range(faces_size):
+        print "**NEW_FACE**"
+        happened = 0
+        distance = abs(height) + abs(width);
+        k_best = 0
+        l_best = 0
+        roi = frame[faces[i][1]:faces[i][1] + faces[i][3], faces[i][0]:faces[i][0] + faces[i][2]]
+
+        ##### Is the current face potentially a criminal ? In which case is_criminal >=1
+
+        cv2.imwrite("face.png", roi)
+        feats = extract_feature(net, ["face.png"], 'prob', 1)
+        feats = feats[0]
+        #preprocess("face.png")
+        is_criminal = 0
+        for z in range(0, len(features_criminal)):
+            if cosine_similarity(feats, features_criminal[z]) > 0.2:
+                is_criminal += 1
+        if is_criminal >0:
+            print "CRIMINAL DETECTED"
+        os.remove("face.png")
+
+        ###### END OF THE IS_CRIMINAL PART
+
+        ###### OVERLAPPING
+
+        if len(array_of_faces) >= 3: # ie it is at least the 3rd frame because counting starts at 0
+            border = len(array_of_faces)-3
+        else:
+            border = 0
+        # For the three previous frames and also the current one
+        for k in range(border, len(array_of_faces)):
+            #For each face of these frames
+            for l in range(0,len(array_of_faces[k])):
+                if k == len(array_of_faces) and l == i:
+                    break
+                if abs(faces[i][0] - array_of_faces[k][l][0]) < roi.shape[0] and abs(faces[i][1] - array_of_faces[k][l][1]) < roi.shape[0]:
+                    happened = 1
+                    if (abs(faces[i][0] - array_of_faces[k][l][0]) + abs(faces[i][1] - array_of_faces[k][l][1])) <= distance:
+                        distance = abs(faces[i][0] - array_of_faces[k][l][0]) + abs(faces[i][1] - array_of_faces[k][l][1])
+                        k_best = k
+                        l_best = l
+            # If at least one candidate for corresponding face was found, we choose the label of the best one
+        if happened == 1:
+            label = array_of_faces_labeling[k_best][l_best]
+            array_of_faces_labeling[frame_number][i] = label
+        # If there is no corresponding face, then it is a new face and we create a new label
+        else:
+            current_label+=1
+            label = current_label
+            array_of_faces_labeling[frame_number][i] = label
+        #We save the picture in tmp and then write the rectangle
+        filename = "tmp/Label" + str(label) + "Frame" + str(frame_number) + "Face" + str(i) + "Score"+ str(cosine_similarity(feats, features_criminal[i]))+".jpg"
+        cv2.imwrite(filename, roi)
+        if is_criminal >= 1:
+            cv2.putText(frame, 'CRIMINAL DETECTED', (faces[i][0], faces[i][0]), font, 5, (0, 0, 255))
+            cv2.rectangle(frame, (faces[i][0],faces[i][1]),(faces[i][0]+faces[i][2],faces[i][1]+faces[i][3]), ( 0, 0, 255 ), 3, 8, 0)
+        else:
+            cv2.rectangle(frame, (faces[i][0], faces[i][1]), (faces[i][0] + faces[i][2], faces[i][1] + faces[i][3]), (255, 0, 0), 3, 8, 0)
+    cv2.namedWindow('Video', cv2.WINDOW_NORMAL)
+    cv2.imshow('Video', frame)
+    out.write(frame)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
 
 # When everything is done, release the capture
+out.release()
 video_capture.release()
 cv2.destroyAllWindows()
 mlab.stop()
