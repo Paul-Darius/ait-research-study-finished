@@ -29,18 +29,23 @@ def generate_matrix(tpr,fpr,frame_number, picture_number):
 					PPND[j][i]+=binomial(j3,frame_number)*pow(b_i,j3)*pow(1-b_i,frame_number-j3)
 	return PPD,PPND
 
-def extract_max(double_list):
+def extract_max(PPD, PPND,frame_number, picture_number):
+	double_list = [[0 for x in range(picture_number+1)] for y in range(frame_number+1)]
+	for i in range(0,picture_number+1):
+		for j in range(0,frame_number+1):
+			double_list[j][i] = PPD[j][i]-PPND[j][i]
 	index_frame, value = max(enumerate(double_list), key=operator.itemgetter(1))
 	index_picture, value = max(enumerate(value), key=operator.itemgetter(1))
 	return index_frame, index_picture, value
 
 
 ###### How to use this:	
-PPD,PPND=generate_matrix(0.88,0.11,5,3)
-print PPD, PPND
-#f,p,v = extract_max(TPR)
-#print "Optimal case is : You should consider that with at least "+str(f)+" detected faces detected as valid on at least "+str(p)+" picture(s) of the criminal you are looking for you have a "+str(v)+" true positive rate."
-#print "It corresponds to a "+str(FPR[f][p])+" false positive rate"
+PPD,PPND=generate_matrix(0.88,0.11,10,10)
+print PPD
+print PPND
+f,p,v = extract_max(PPD,PPND,5,3)
+print "Optimal case is : You should consider that with at least "+str(f)+" detected faces detected as valid on at least "+str(p)+" picture(s) of the criminal you are looking for."
+#print "It corresponds to a "+"PPND[+" false positive rate"
 im = plt.imshow(PPD, cmap='hot')
 plt.colorbar(im, orientation='horizontal')
 plt.show()
