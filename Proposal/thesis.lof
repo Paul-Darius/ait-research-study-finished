@@ -14,5 +14,7 @@
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Architecture of the lightened convolution network. Extracted from Wu, He, Sun, 2015.}}{18}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Details on the architecture of the lightened convolution networks. Extracted from Wu, He, Sun, 2015.}}{19}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces The MFM activation function used on a convolution layer. Extracted from Wu, He, Sun, 2015.}}{20}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Comparison with other state-of-the-art methods on YTF. Extracted from Wu, He, Sun, 2015.}}{20}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Comparison with other state-of-the-art methods on LFW. Extracted from Wu, He, Sun, 2015.}}{21}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Comparison with other state-of-the-art methods on LFW. Extracted from Wu, He, Sun, 2015.}}{20}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Comparison with other state-of-the-art methods on YTF. Extracted from Wu, He, Sun, 2015.}}{21}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces ROC curve of the network on the MBK database.}}{22}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces ROC curve of the network on the MBK database.}}{22}

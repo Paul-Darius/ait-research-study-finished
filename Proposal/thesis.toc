@@ -35,3 +35,7 @@
 \contentsline {section}{\numberline {4.2}Network used in this research}{17}
 \contentsline {subsection}{\numberline {4.2.1}Architecture}{17}
 \contentsline {subsection}{\numberline {4.2.2}Results}{20}
+\contentsline {section}{\numberline {4.3}Results on the MBK database}{21}
+\contentsline {subsection}{\numberline {4.3.1}The MBK database}{21}
+\contentsline {subsection}{\numberline {4.3.2}Test}{21}
+\contentsline {subsection}{\numberline {4.3.3}Result}{21}

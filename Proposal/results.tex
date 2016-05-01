@@ -71,6 +71,7 @@ Given a convolution layer \(C \in R^h^w^2^n\), the MFM can be written :
 
 \(2n\) being the channel of the input convolution layer, \(1 \leq i \leq h\) and \(1 \leq j \leq w\).
 
+Given a face image as an input, the output of the neural network is an array of float values called features. To verify that the face on an image is the same as the face on another one, the cosine of their corresponding feature array is computed and is compared to a threshold.
 
 \subsection{Results}
 
@@ -96,4 +97,34 @@ As said previously, these networks reach state-of-the-art results. The two netwo
 \end{itemize}
 
 \FloatBarrier
+
+\section{Results on the MBK database}
+\subsection{The MBK database}
+The MBK database is an experimental database of faces extracted from surveillance videos in the MBK mall in Bangkok. The labeling of the faces is done both through automatic overlapping and manual labeling for the researchers. This leads to around 85,000 images of faces. Few mistakes were made by the automatic process and it was not feasible to correct them. Furthermore, the faces are directly extracted from frames and their resolution is often very poor while their blurriness is important. 
+\subsection{Test}
+The network A presented in the previous section and pre-trained for the LFW database was used on this database of face images from surveillance video. It was tested on 13881 negative pairs and 13881 positive pairs. The first element of each pair was taken in the direct order of the database. The second element was taken such that each first element was the origin of as many positive and negative pairs. The negative pairs were chosen randomly.
+\subsection{Result}
+The ROC curve obtained is shown in the following figure.
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[scale=0.7]{figures/result.png}  
+  \protect\label{fig:mfm}
+  \caption[ROC curve of the network on the MBK database.]{ROC curve of the network on the MBK database.}
+\end{figure}
+\FloatBarrier
+\end{itemize}
+
+The ROC curve obtained on the MBK database is compared with other newtorks such as DeepFace on YTF database in the following figure. This comparison is a simple indication as the curves do not concern the same databases, though they are both made of face images extracted from videos. The light green one is the one from the MBK database, the others are all from YTF.
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[scale=0.7]{figures/result_compared.png}  
+  \protect\label{fig:mfm}
+  \caption[ROC curve of the network on the MBK database.]{ROC curve of the network on the MBK database.}
+\end{figure}
+\FloatBarrier
+\end{itemize}
+
+\section{Description of the final product}
 
