@@ -1,7 +1,9 @@
 The purpose of this software is to detect faces on a database given by the user -database of .avi videos-. The software will create a "Database" directory filled with .jpg images of the detected faces.
-Then, with some pictures of few people’s faces, the software will tell if and where these people are appearing on the videos.
+Then, with some pictures of a person’s face, the software tells if and where that person is appearing on the videos by saving the detected face with the name of the video it was detected
 
-The ultimate goal is to help police find previously identified criminals on
+The ultimate goal is to help police find previously identified criminals on surveillance videos.
+
+
 
 Installation : chmod+x install.sh ; ./install.sh
 Generate Database : chmod +x generate_database.sh; ./generate_database.sh /path/to/database/ [demo_mode]
