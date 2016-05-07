@@ -1,0 +1,94 @@
+\def\germ{\frak} \def\scr{\cal} \ifx\documentclass\undefinedcs
+  \def\bf{\fam\bffam\tenbf}\def\rm{\fam0\tenrm}\fi % f**k-amstex!
+  \def\defaultdefine#1#2{\expandafter\ifx\csname#1\endcsname\relax
+  \expandafter\def\csname#1\endcsname{#2}\fi} \defaultdefine{Bbb}{\bf}
+  \defaultdefine{frak}{\bf} \defaultdefine{=}{\B} % doublef**k-amstex!!
+  \defaultdefine{mathfrak}{\frak} \defaultdefine{mathbb}{\bf}
+  \defaultdefine{mathcal}{\cal}
+  \defaultdefine{beth}{BETH}\defaultdefine{cal}{\bf} \def\bbfI{{\Bbb I}}
+  \def\mbox{\hbox} \def\text{\hbox} \def\om{\omega} \def\Cal#1{{\bf #1}}
+  \def\pcf{pcf} \defaultdefine{cf}{cf} \defaultdefine{reals}{{\Bbb R}}
+  \defaultdefine{real}{{\Bbb R}} \def\restriction{{|}} \def\club{CLUB}
+  \def\w{\omega} \def\exist{\exists} \def\se{{\germ se}} \def\bb{{\bf b}}
+  \def\equivalence{\equiv} \let\lt< \let\gt>
+\begin{thebibliography}{10}
+
+\bibitem{an2012face}
+Le~An, Mehran Kafai, and Bir Bhanu.
+\newblock Face recognition in multi-camera surveillance videos using dynamic
+  bayesian network.
+\newblock In {\em Sixth International Conference on Distributed Smart Cameras
+  (ICDSC)}, pages 1--6. IEEE, 2012.
+
+\bibitem{opencv_library}
+G.~Bradski.
+\newblock {\em Dr. Dobb's Journal of Software Tools}, 2000.
+
+\bibitem{chopra2005learning}
+Sumit Chopra, Raia Hadsell, and Yann LeCun.
+\newblock Learning a similarity metric discriminatively, with application to
+  face verification.
+\newblock In {\em IEEE Computer Society Conference on Computer Vision and
+  Pattern Recognition. CVPR.}, volume~1, pages 539--546. IEEE, 2005.
+
+\bibitem{collobert2011torch7}
+Ronan Collobert, Koray Kavukcuoglu, and Cl{\'e}ment Farabet.
+\newblock Torch7: A matlab-like environment for machine learning.
+\newblock In {\em BigLearn, NIPS Workshop}, number EPFL-CONF-192376, 2011.
+
+\bibitem{deng2014deep}
+Li~Deng and Dong Yu.
+\newblock Deep learning: Methods and applications.
+\newblock {\em Foundations and Trends in Signal Processing}, 7(3--4):197--387,
+  2014.
+
+\bibitem{goswami2014mdlface}
+Gaurav Goswami, Romil Bhardwaj, Rajdeep Singh, and Mayank Vatsa.
+\newblock Mdlface: Memorability augmented deep learning for video face
+  recognition.
+\newblock In {\em IEEE International Joint Conference on Biometrics (IJCB).},
+  pages 1--7. IEEE, 2014.
+
+\bibitem{harley2015isvc}
+Adam~W Harley.
+\newblock An interactive node-link visualization of convolutional neural
+  networks.
+\newblock In {\em ISVC}, pages 867--877, 2015.
+
+\bibitem{jia2014caffe}
+Yangqing Jia, Evan Shelhamer, Jeff Donahue, Sergey Karayev, Jonathan Long, Ross
+  Girshick, Sergio Guadarrama, and Trevor Darrell.
+\newblock Caffe: Convolutional architecture for fast feature embedding.
+\newblock In {\em Proceedings of the ACM International Conference on
+  Multimedia}, pages 675--678. ACM, 2014.
+
+\bibitem{lecun1998gradient}
+Yann LeCun, L{\'e}on Bottou, Yoshua Bengio, and Patrick Haffner.
+\newblock Gradient-based learning applied to document recognition.
+\newblock {\em Proceedings of the IEEE}, 86(11):2278--2324, 1998.
+
+\bibitem{liu2003video}
+Xiaoming Liu and Tsuhan Chen.
+\newblock Video-based face recognition using adaptive hidden markov models.
+\newblock In {\em IEEE Computer Society Conference on Computer Vision and
+  Pattern Recognition. Proceedings.}, volume~1, pages I--340. IEEE, 2003.
+
+\bibitem{rosenblatt1961principles}
+Frank Rosenblatt.
+\newblock Principles of neurodynamics. perceptrons and the theory of brain
+  mechanisms.
+\newblock Technical report, DTIC Document, 1961.
+
+\bibitem{schroff2015facenet}
+Florian Schroff, Dmitry Kalenichenko, and James Philbin.
+\newblock Facenet: A unified embedding for face recognition and clustering.
+\newblock In {\em Proceedings of the IEEE Conference on Computer Vision and
+  Pattern Recognition}, pages 815--823, 2015.
+
+\bibitem{taigman2014deepface}
+Yaniv Taigman, Ming Yang, Marc'Aurelio Ranzato, and Lior Wolf.
+\newblock Deepface: Closing the gap to human-level performance in face
+  verification.
+\newblock pages 1701--1708, 2014.
+
+\end{thebibliography}

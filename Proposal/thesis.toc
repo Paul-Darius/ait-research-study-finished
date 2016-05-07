@@ -39,3 +39,10 @@
 \contentsline {subsection}{\numberline {4.3.1}The MBK database}{21}
 \contentsline {subsection}{\numberline {4.3.2}Test}{21}
 \contentsline {subsection}{\numberline {4.3.3}Result}{21}
+\contentsline {section}{\numberline {4.4}Description of the final product}{23}
+\contentsline {subsection}{\numberline {4.4.1}Face detection & overlapping}{24}
+\contentsline {subsection}{\numberline {4.4.2}Face verification}{25}
+\contentsline {subsection}{\numberline {4.4.3}Selection of the best test}{26}
+\contentsline {chapter}{\numberline {5} Conclusion}{27}
+\contentsline {section}{\numberline {5.1}How to use this software}{27}
+\contentsline {section}{\numberline {5.2}Limitations. Possible improvements.}{27}

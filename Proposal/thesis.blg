@@ -1,0 +1,55 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: thesis.aux
+A level-1 auxiliary file: frontstuff.aux
+A level-1 auxiliary file: intro.aux
+A level-1 auxiliary file: literature.aux
+A level-1 auxiliary file: methodology.aux
+A level-1 auxiliary file: results.aux
+The style file: plain.bst
+Database file #1: references.bib
+Warning--empty title in opencv_library
+Warning--there's a number but no series in collobert2011torch7
+Warning--empty journal in taigman2014deepface
+You've used 13 entries,
+            2118 wiz_defined-function locations,
+            580 strings with 7279 characters,
+and the built_in function-call counts, 5351 in all, are:
+= -- 544
+> -- 231
+< -- 11
++ -- 92
+- -- 78
+* -- 353
+:= -- 827
+add.period$ -- 43
+call.type$ -- 13
+change.case$ -- 78
+chr.to.int$ -- 0
+cite$ -- 16
+duplicate$ -- 225
+empty$ -- 423
+format.name$ -- 78
+if$ -- 1175
+int.to.chr$ -- 0
+int.to.str$ -- 13
+missing$ -- 12
+newline$ -- 68
+num.names$ -- 26
+pop$ -- 98
+preamble$ -- 2
+purify$ -- 65
+quote$ -- 0
+skip$ -- 168
+stack$ -- 0
+substring$ -- 344
+swap$ -- 84
+text.length$ -- 11
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 52
+warning$ -- 3
+while$ -- 54
+width$ -- 15
+write$ -- 149
+(There were 3 warnings)

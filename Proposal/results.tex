@@ -104,7 +104,7 @@ The MBK database is an experimental database of faces extracted from surveillanc
 \subsection{Test}
 The network A presented in the previous section and pre-trained for the LFW database was used on this database of face images from surveillance video. It was tested on 13881 negative pairs and 13881 positive pairs. The first element of each pair was taken in the direct order of the database. The second element was taken such that each first element was the origin of as many positive and negative pairs. The negative pairs were chosen randomly.
 \subsection{Result}
-The ROC curve obtained is shown in the following figure.
+The ROC curve obtained is shown in the following figure. The accuracy of the model reaches 88.04\%.
 
 \begin{figure}[!ht]
   \centering
@@ -126,5 +126,77 @@ The ROC curve obtained on the MBK database is compared with other newtorks such 
 \FloatBarrier
 \end{itemize}
 
+A histogram describing the repartition of the positive and negative pairs relatively to their score is also provided. In blue are represented the negative pairs and in red are represented the positive ones. Few errors on the automatic process of overlapping were made. The details and the consequences of these errors are described in the next section.
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[scale=0.7]{figures/histograms.png}  
+  \protect\label{fig:mfm}
+  \caption[ROC curve of the network on the MBK database.]{ROC curve of the network on the MBK database.}
+\end{figure}
+\FloatBarrier
+\end{itemize}
+\FloatBarrier
+
 \section{Description of the final product}
 
+The final experimental product proposed at the end of this study is made of several parts.
+
+\subsection{Face detection & overlapping}
+As said in the third chapter, the face detection algorithm was written with C++ and OpenCV. The algorithm uses Haar feature-based cascade classifiers, described by Viola and Jones (2001). However a simple face detector was not enough and an overlapping algorithm providing automatic labeling of the faces had to be written for two reasons.
+\begin{itemize}
+\item First, to test the network we needed positive and negative pairs of images. The problem being that there are almost 90,000 images of faces in the database after the face detection was done and it was not possible to create enough pairs manually.
+\item The second point is described in the last section of this chapter.
+\end{itemize}
+Consequently, an algorithm was written. Its behavior is described in pseudo-code:
+
+\begin{algorithm}[H]
+\For{each video in the database}{
+ \For{each frame of the current video}{
+  Detect all the faces of the frame N\;
+ \For{each face of the current frame}{
+    \If{there is a face detected in the three previous frames whose distance with the current face is inferior to the size of the face}{
+    The label L of the current face := The label of the nearest of the faces of the three previous frames\;
+    Save the detected face in \enquote{Database/video/LabelLFrameNFaceP.jpg}\;
+    }
+    \Else{}{
+    The label L of the current face := Biggest label given until now + 1
+    Save the detected face in \enquote{Database/video/LabelLFrameNFaceP.jpg}\;
+    }
+  }
+  }
+  }
+ \caption{Automatic Labeling Algorithm}
+\end{algorithm}
+
+A representation of the final database is given below:
+
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[scale=0.7]{figures/databaserepresentation.png}  
+  \caption[The database after automatic labeling.]{The database after automatic labeling.}
+  \protect\label{fig:Siamese}
+\end{figure}
+\FloatBarrier
+\end{itemize}
+
+This algorithm is efficient enough in our case but no study has been made on its real accuracy. Practically, two errors can be made.
+\begin{itemize}
+\item A single face appearing on the video is considered with two different labels.
+\item Several faces appearing on the video are considered with the same label.
+\end{itemize}
+
+The first error does not change much about the results of the study. The negative pairs are chosen randomly in the list of all the faces. The possibility that two images from the same person are considered as negative pairs is very low. However the second scenario, more rare but still existing, is more dangerous for the precision of the analysis of the results as the positive pairs are created with all the available images of the same label. Consequently, the number of pairs considered as positive with a relatively low score is slightly overestimated while the number of pairs with a relatively low score is slightly underestimated. The global accuracy of the product is slightly underestimated.
+
+\subsection{Face verification}
+After the face detection process is done, the second part of the product can start.
+It performs several successive actions.
+\begin{itemize}
+\item Asks the user to enter the address of the images of the person he is looking for in the database.
+\item Process those images in the neural network which outputs an array of features (numbers) from each image. The above-mentioned distance between two images is directly computed as a cosine-score of their two corresponding arrays of features.
+\item Asks for the address of the database containing the images of face.
+\item The array of features of each image is computed by feed-forwarding the image in the neural network. The cosine-score of each image of detected face with each image of the person the user is looking for is computed. The algorithm decides whether it represents the same person or not.
+\end{itemize}
+\subsection{Selection of the best test}
+For the rest of this chapter, let's call the detected images The initial naive idea was to consider that if each image
