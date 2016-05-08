@@ -18,5 +18,6 @@
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Comparison with other state-of-the-art methods on YTF. Extracted from Wu, He, Sun, 2015.}}{21}
 \contentsline {figure}{\numberline {4.6}{\ignorespaces ROC curve of the network on the MBK database.}}{22}
 \contentsline {figure}{\numberline {4.7}{\ignorespaces ROC curve of the network on the MBK database.}}{23}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces ROC curve of the network on the MBK database.}}{23}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Repartition of the positive and negative pairs according to their score.}}{24}
 \contentsline {figure}{\numberline {4.9}{\ignorespaces The database after automatic labeling.}}{25}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces The matrix of probabilities.}}{28}

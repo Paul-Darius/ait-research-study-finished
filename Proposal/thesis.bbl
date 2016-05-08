@@ -91,4 +91,9 @@ Yaniv Taigman, Ming Yang, Marc'Aurelio Ranzato, and Lior Wolf.
   verification.
 \newblock pages 1701--1708, 2014.
 
+\bibitem{DBLP:journals/corr/WuHS15}
+Xiang Wu, Ran He, and Zhenan Sun.
+\newblock A lightened {CNN} for deep face representation.
+\newblock {\em CoRR}, abs/1511.02683, 2015.
+
 \end{thebibliography}

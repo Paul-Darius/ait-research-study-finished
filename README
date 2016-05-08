@@ -1,9 +1,10 @@
-The purpose of this software is to detect faces on a database given by the user -database of .avi videos-. The software will create a "Database" directory filled with .jpg images of the detected faces.
-Then, with some pictures of a person’s face, the software tells if and where that person is appearing on the videos by saving the detected face with the name of the video it was detected
+The purpose of this software is to detect and recognize faces on a database given by auser -database of .avi videos-. The software creates a "Database" directory filled with .jpg images of the detected faces. Then, with some pictures of a person’s face that has to be recognized, the software tells if and where that person is appearing on the videos by comparing the given pictures to the ones saved in the Database directory.
 
 The ultimate goal is to help police find previously identified criminals on surveillance videos.
 
 
+Face detection:
+_______________
 
 Installation : chmod+x install.sh ; ./install.sh
 Generate Database : chmod +x generate_database.sh; ./generate_database.sh /path/to/database/ [demo_mode]
@@ -42,12 +43,13 @@ Main_Directory/Database/videoM/LabelX[|Profile|]FrameYFaceZ.jpg B
 
 B is automatically computed from M and X so that the label appearing in the file can be used directly by caffe.
 
-FOR SIAMESE NETWORK ONLY:
-—————————————————————————
+How to manually improve the face detection?
+___________________________________________
 
 Supposing that the automatic labeling was not efficient enough for your particular case -typically if some main faces appeared on several videos-, you may have to manually change the labels of the concerned images.
 
-Let’s assume you have to modify few labels to face this kind of issues. If you manually changed the name of some images so that the label of each file is the first  character of the file name (ie for example 1Frame2.jpg has label 1 and 4Frame23.jpg has label 4), then, the next commands will generate a new database file called labelised_full_database.txt in the directory Caffe_File with the required labels. Note that it works only with labels between 1 to 9. With a minor modification, more labels can be modified. Other few pictures with labels 1 to 9 can be manually modified directly in the file if needed.
+Let’s assume you have to modify few labels to face this kind of issues. If you manually changed the name of some images so that the label of each file is the first character of the file name (ie for example 1Frame2.jpg has label 1 and 4Frame23.jpg has label 4), then, the next commands will generate a new database file called labelised_full_database.txt in the directory Caffe_File with the required labels. Note that it works only with labels between 1 to 9. With a minor modification, more labels can be modified. Other few pictures with labels 1 to 9 can be manually modified directly in the file if needed.
+
 
 First, let’s regenerate full_database.py with the new names:
 -> python src/python/fulldbfile.py
@@ -60,35 +62,14 @@ You simply have to copy paste that to continue the work:
 -> mv Caffe_Files/full_database.txt Caffe_Files/full_database_old.txt
 -> mv Caffe_Files/labelised_full_database.txt Caffe_Files/full_database.txt
 
-—————————————————————————
 
-Generate Train and Validate caffe files : chmod +x trainandval.sh;  ./trainandval.sh [number_of_files]
+TO USE THE FACE VERIFICATION NETWORK:
+_____________________________________
 
--> number_of_files is an option. If it is set to 1, then only a train.txt file will be generated as a copy of full_database.txt. If it is set to 2, then train.txt and test.txt will be generated. These two files will contain the same number of lines, i.e. the same number of files (plus or minus one). Finally, if it is set to 3, it will contain train.txt, test.txt, and valid.txt. The three files will have the same size.
-
-
-FOR SIAMESE NETWORK ONLY:
-—————————————————————————
-Files generation from train.txt and test.txt. For this usage, you should have done “./trainandval.sh 2” previously.
--> python src/python/create_siamese_db.py : It will create the train1.txt, train2.txt, test1.txt and test2.txt files required by the siamese network.
-
--> Then :
-for name in Database/*/*.jpg; do
-convert -resize 256x256\! $name $name
-done
-
-The goal is to resize the images of the database. Modify the path “Database/*/*.jpg” if necessary.
-
--> ./src/siamese/train_siamese_mbk.sh for training
--> python src/siamese/analyse.py for testing
-—————————————————————————
-
-FOR DEEPFACE NETWORK:
 
 First, modify the database with this script for preprocessing:
 -> python src/python/preprocessing_face_id.py
 
-—————————————————————
 
 TO TEST THE NETWORK:
 ———————————————————-
@@ -108,8 +89,18 @@ To generate the file src/face_id/face_verification_experiment-master/results/mbk
 
 -> In matlab, launch face_verification_experiment-master/code/evaluation.m to evaluate the work.
 
-TO USE THE SCRIPT:
-——————————————————
+TO USE THE FACE VERIFICATION SCRIPT:
+____________________________________
+
+-> python src/software/soft.py
+
+You will be asked the address of the pictures of the face of the person you want to recognise. The result is the faces which have been recognised in the Database directory. They are saved in a directory called Captured_Faces.
+
+
+
+TO USE THE EXPERIMENTAL SCRIPT FOR FACE TRACKING WITH DLIB AND FACE THEN FACE VERIFICATION:
+___________________________________________________________________________________________
+
 In src/software:
 -> Copy the images of the criminal you want to find in the video in criminal_pictures/
 -> Copy the video you want to find the criminal in in video/
@@ -117,7 +108,31 @@ In src/software:
 
 The detected faces will be saved in detected/
 
-Other scripts:
+INFORMATIONS ABOUT THE SIAMESE NETWORK :
+________________________________________
+
+The Siamese Network does not work properly. However, you can try to recreate the experience I made by following these intructions:
+
+Generate Train and Validate caffe files : chmod +x trainandval.sh;  ./trainandval.sh [number_of_files]
+
+-> number_of_files is an option. If it is set to 1, then only a train.txt file will be generated as a copy of full_database.txt. If it is set to 2, then train.txt and test.txt will be generated. These two files will contain the same number of lines, i.e. the same number of files (plus or minus one). Finally, if it is set to 3, it will contain train.txt, test.txt, and valid.txt. The three files will have the same size.
+
+Files generation from train.txt and test.txt : 
+For this usage, you should have done “./trainandval.sh 2” previously.
+-> python src/python/create_siamese_db.py : It will create the train1.txt, train2.txt, test1.txt and test2.txt files required by the siamese network.
+
+-> Then :
+for name in Database/*/*.jpg; do
+convert -resize 256x256\! $name $name
+done
+
+The goal is to resize the images of the database. Modify the path “Database/*/*.jpg” if necessary.
+
+-> ./src/siamese/train_siamese_mbk.sh for training
+-> python src/siamese/analyse.py for testing
+
+
+OTHER SCRIPTS:
 ——————————————
 
 src/python/5pt_preprocess.py does not work properly. Initially it was meant to generate the preprocessing files required for face_id to be used. Unhappily, the github page was in my opinion not documented enough and I did not have enough time to understand it. So I used an other more simple preprocessing technique, which seems to be working fine.

@@ -32,17 +32,27 @@
 \contentsline {section}{\numberline {3.8}Testing}{16}
 \contentsline {chapter}{\numberline {4} Results}{17}
 \contentsline {section}{\numberline {4.1}Preliminary results}{17}
-\contentsline {section}{\numberline {4.2}Network used in this research}{17}
-\contentsline {subsection}{\numberline {4.2.1}Architecture}{17}
-\contentsline {subsection}{\numberline {4.2.2}Results}{20}
-\contentsline {section}{\numberline {4.3}Results on the MBK database}{21}
-\contentsline {subsection}{\numberline {4.3.1}The MBK database}{21}
-\contentsline {subsection}{\numberline {4.3.2}Test}{21}
-\contentsline {subsection}{\numberline {4.3.3}Result}{21}
-\contentsline {section}{\numberline {4.4}Description of the final product}{23}
-\contentsline {subsection}{\numberline {4.4.1}Face detection & overlapping}{24}
-\contentsline {subsection}{\numberline {4.4.2}Face verification}{25}
-\contentsline {subsection}{\numberline {4.4.3}Selection of the best test}{26}
-\contentsline {chapter}{\numberline {5} Conclusion}{27}
-\contentsline {section}{\numberline {5.1}How to use this software}{27}
-\contentsline {section}{\numberline {5.2}Limitations. Possible improvements.}{27}
+\contentsline {section}{\numberline {4.2}Evolution after the proposal}{17}
+\contentsline {section}{\numberline {4.3}Network used in this research}{18}
+\contentsline {subsection}{\numberline {4.3.1}Architecture}{18}
+\contentsline {subsection}{\numberline {4.3.2}Results}{20}
+\contentsline {section}{\numberline {4.4}Results on the MBK database}{21}
+\contentsline {subsection}{\numberline {4.4.1}The MBK database}{21}
+\contentsline {subsection}{\numberline {4.4.2}Test}{21}
+\contentsline {subsection}{\numberline {4.4.3}Result}{21}
+\contentsline {section}{\numberline {4.5}Description of the final product}{24}
+\contentsline {subsection}{\numberline {4.5.1}Face detection & overlapping}{24}
+\contentsline {subsection}{\numberline {4.5.2}Face verification}{26}
+\contentsline {subsection}{\numberline {4.5.3}Selection of the best test}{26}
+\contentsline {subsection}{\numberline {4.5.4}Processing of group of images by label}{29}
+\contentsline {chapter}{\numberline {5} Conclusion}{30}
+\contentsline {section}{\numberline {5.1}Limitations. Possible improvements.}{30}
+\contentsline {section}{\numberline {5.2}How to use this software}{30}
+\contentsline {subsection}{\numberline {5.2.1}Face detection}{31}
+\contentsline {subsection}{\numberline {5.2.2}How to manually improve the face detection?}{32}
+\contentsline {subsection}{\numberline {5.2.3}To use the face verification network}{33}
+\contentsline {subsection}{\numberline {5.2.4}To test the newtork}{33}
+\contentsline {subsection}{\numberline {5.2.5}To use the face verification script}{33}
+\contentsline {subsection}{\numberline {5.2.6}To use the experimental script for face tracking with DLIB and then face verification}{34}
+\contentsline {subsection}{\numberline {5.2.7}Informations about the Siamese Network}{34}
+\contentsline {subsection}{\numberline {5.2.8}Other Scripts}{35}

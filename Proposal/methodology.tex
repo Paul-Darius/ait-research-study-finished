@@ -15,7 +15,7 @@ Figure 3.1 shows the design of the final product.
 
 \section{Solution overview}
 
-The goal of this research is to build an algorithm which can detect our three researchers in the surveillance videos of a mall, as shown in the previous section. The solution is made of five steps.
+The goal of this research was to build an algorithm which can detect our three researchers in the surveillance videos of a mall, as shown in the previous section. The solution is made of five steps.
 \begin{itemize}
 \item Initially, we have a database of videos.\newline
 \item Then, these videos are processed to extract the faces of every person appearing in them. We have now a database of faces.\newline
@@ -36,12 +36,12 @@ Figure 3.2 presents two main ideas. In blue, the steps described in the above se
 \FloatBarrier
 
 \section{Database}
-As said in the introduction, deep learning algorithms will be applied to perform face recognition in a video surveillance system. A database of surveillance videos is required to generate a training set and a testing set for our model.
-The database that will be used for the learning process is a set of 14 videos recorded in the MBK Shopping Center of Bangkok. The duration of the videos is variable, from a minute to around 3 minutes and 30 seconds. Three of the researchers of our laboratory appear in the videos, walking in the mall like any other person.
+As said in the introduction, deep learning algorithms were applied to perform face recognition in a video surveillance system. A database of surveillance videos was required to generate a training set and a testing set for our model.
+The database that was used for the learning process is a set of 14 videos recorded in the MBK Shopping Center of Bangkok. The duration of the videos is variable, from a minute to around 3 minutes and 30 seconds. Three of the researchers of our laboratory appear in the videos, walking in the mall like any other person.
 
 \section{Raw Database of Faces}
 
-A C++ algorithm using OpenCV (Bradski, 2000) provided in Algorithm 1 will be used for face detection.
+A C++ algorithm using OpenCV (Bradski, 2000) provided in Algorithm 1 was used for face detection.
 
 \begin{algorithm}[H]
  \For{each video in the database}{
@@ -79,37 +79,37 @@ The framework that will be presented in the next section requires two files to w
 
 The label being 1 for the first of our researchers appearing in the surveillance system, 2 for the second one, 3 for the third one, and 0 for any other person.
 
-The labeling has to be done manually. The chosen method consists in modifying the name of the files where a researcher appears in this way:
+The labeling had to be done manually. The chosen method consists in modifying the name of the files where a researcher appears in this way:
 
 \blockquote{filename.jpg becomes Kfilename.jpg}, where K is the label of the researcher.
 
 
 \subsection{Case of a \enquote{Same/Not same} model}
 
-In the case of a \enquote{Same/Not same} model, the problem is a bit different. A slightly strange structure is best for this model. A solution is to generate two files for training and two files for testing. Let's name them train1.txt, train2.txt, and test1.txt and test2.txt. Their individual structure will be as explained before.
+In the case of a \enquote{Same/Not same} model, the problem was a bit different. A slightly strange structure is best for this model. A solution was to generate two files for training and two files for testing. Let's name them train1.txt, train2.txt, and test1.txt and test2.txt. Their individual structure are as explained before.
 
 \blockquote{/adress/of/the/training/image1.jpg label1\newline
 /adress/of/the/training/image2.jpg label2\newline
 ...\newline
 /adress/of/the/training/imageN.jpg labelN}
 
-In the line K, train1.txt and train2.txt will contain respectively \enquote{address/to/file1K.jpg labelK} and {address/to/file2K.jpg labelK}. The labels will be identical. However, the images will be different. If both the images represent the same person, the label will be 1, and 0 otherwise. test1.txt and test2.txt will work the same way. Only one of the two labels will be used for the supervised learning, the other one, being identical, will not be used. The syntax of the training and testing files being fixed with Caffe, this solution seems to be the most adapted to the problem encountered with the \enquote{Same/Not Same} models.
+In the line K, train1.txt and train2.txt contain respectively \enquote{address/to/file1K.jpg labelK} and {address/to/file2K.jpg labelK}. The labels are identical. However, the images are different. If both the images represent the same person, the label will be 1, and 0 otherwise. test1.txt and test2.txt will work the same way. Only one of the two labels are used for the supervised learning, the other one, being identical, is not used. The syntax of the training and testing files being fixed with Caffe, this solution seems to be the most adapted to the problem encountered with the \enquote{Same/Not Same} models.
 
 
 \subsection{Conclusion}
-It is a feasible task to create a serie of python scripts that will run one after the other to create the required train.txt and test.txt files. These python scripts will be indirectly launched through bash scripts. A README file will be provided to explain which commands to type and which options to select to generate the required files from the database.\\
+It was a feasible task to create a serie of python scripts that run one after the other to create the required train.txt and test.txt files. These python scripts are indirectly launched through bash scripts. A README file will be provided to explain which commands to type and which options to select to generate the required files from the database.\\
 
 The purpose of the designed architecture is to make those scripts reusable for any new database, and generalizable for an arbitrary number of labels. If a user provides another database of videos, and follows the process described in the README file, the required train.txt and test.txt files will be generated, and the models presented in the next section can be used for learning or testing directly on these data.
 
 \section{Model}
 
 \subsection{Framework}
-The chosen deep learning framework for this study is Caffe (Jia et al., 2014). It is possible that Torch (Collobert, Kavukcuoglu, Farabet, 2011) will be used also, if useful.\\
+The chosen deep learning framework for this study is Caffe (Jia et al., 2014).\\
 
 \subsection{Strategy}
 Different strategies have been considered for this modelisation. As explained in the previous chapter, there are two usual schemes for face recognition.
 \begin{itemize}
-\item The first one is the \enquote{same/not same} scheme. The idea is to readjust the Siamese Network described by Lecun et al. (2005) to our particular dataset.\newline
+\item The first one is the \enquote{same/not same} or \enquote{face verification} scheme. The idea is to readjust the Siamese Network described by Lecun et al. (2005) to our particular dataset.\newline
 \item The second scheme is direct face identification. For this purpose, the idea is to modify the last layer of a state-of-the-art deep neural network architecture for face identification. The output of this last modified layer should be binary. Either the input image represents one of our researchers ---in practice, a criminal----, or it does not. The previous layers should already be trained, and the training should be done in the last layer only.
 \end{itemize}
 \subsection{The learning process with Caffe}
@@ -136,4 +136,4 @@ The learning process produces two files: A .caffemodel and a .solverstate. These
 
 \section{Testing}
 
-As we just said, the output of a face identification model should be binary. A python script to test the accuracy of the model can be written with no difficulty. On the contrary, the input of a Siamese Network is two images and the output is an energy. This energy is high for two images representing two different people and low otherwise. A threshold on this energy has to be determined to make classification possible with the network. Thus, before any test, a script has to be written, determining a good threshold. This script should be written using pycaffe, the caffe model for python. Then, and only then can the tests be done.
+As we just said, the output of a face identification model should be binary. A python script to test the accuracy of the model can be written with no difficulty. On the contrary, the input of a Siamese Network is two images and the output can be represented as an energy. This energy is high for two images representing two different people and low otherwise (in some models, it is the opposite). A threshold on this energy has to be determined to make classification possible with the network. Thus, before any test, a script had to be written, determining a good threshold. This script was written using pycaffe, the caffe model for python. Then, and only then could the tests be done.
