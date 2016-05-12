@@ -7,9 +7,9 @@
 \section{Limitations. Possible improvements.}
 Several improvements can be made.
 \begin{itemize}
-\item First, concerning the face detection. The face detection used in this experience has a high rate of false positive. Despite the fact that the neural network we used is particularly efficient, its behavior is a bit unexpectable when the image of a face is compared to something which is not one. Using an other library like dlib with a lower false positive rate would be more efficient. Such a script was written was written in python, but tests have still to be done.
+\item First, concerning the face detection. The face detection used in this experience has a high rate of false positive. Despite the fact that the neural network we used is particularly efficient, its behavior is a bit unexpectable when the image of a face is compared to something which is not one. Using an other library like dlib with a lower false positive rate would be more efficient. Such a script was written in python, but tests have still to be done.
 \item The second point concerns the face tracking. Though the written algorithm has an acceptable experimental accuracy, other techniques like Mean Shift are known as way more efficient for face tracking.
-\item The last point is that, as mentioned in the previous chapter, the technique used to test whether or not a group of labeled face images should be considered as a criminal or not can be improved. The solution used in this software is not the best solution. The law of large numbers -not implemented- is probably a better solution. It was not implemented here.
+\item The last point is that, as mentioned in the previous chapter, the technique used to test whether or not a group of labeled face images should be considered as a criminal or not can be improved. The solution used in this software is not the best solution. The law of large numbers is probably a better solution. It was not implemented here.
 \end{itemize}
 
 \section{How to use this software}
@@ -29,7 +29,7 @@ Generate Database : chmod +x generate\_database.sh; ./generate\_database.sh /pat
 
 The .jpg files are now saved with this structure:\\
 
-Main\_Directory/Database/video_name/LabelXFrameYFaceZ[\|Profile\|].jpg\\
+Main\_Directory/Database/video\_name/LabelXFrameYFaceZ[Profile].jpg\\
 
 \begin{itemize}
 \item Database: main directory of the files.
@@ -54,7 +54,7 @@ Main\_Directory/Caffe\_Files/full\_database.txt\\
 
 Each line represent a specific .jpg image of of this file has the following structure:\\
 
-Main\_Directory/Database/videoM/LabelX[\|Profile\|]FrameYFaceZ.jpg B\\
+Main\_Directory/Database/videoM/LabelX[Profile]FrameYFaceZ.jpg B\\
 
 B is automatically computed from M and X so that the label appearing in the file can be used directly by caffe.
 

@@ -6,7 +6,7 @@
 \newpage
 %\begin{document}
 \pagestyle{plain}
-\pagenumbering{roman}
+%\pagenumbering{roman}
 \setcounter{page}{1}
 \addcontentsline{toc}{section}{Title Page}
 %\setlength{\footskip}{-15mm}
@@ -28,7 +28,7 @@
 
 \vskip 3.5em
 \singlespace A dissertation submitted in partial fulfillment of the
-requirements for the degree of\\ Master of Engineering in Computer Science 
+requirements for the degree of\\ Master of Science in\\ Computer Science 
 
 %	\vskip 5em
 \vskip 0.5em
@@ -39,7 +39,7 @@ requirements for the degree of\\ Master of Engineering in Computer Science
       \\[-1em]
       Examination Committee: & Dr.\ Matthew Dailey (Chairperson) \\[-0.8em]
                              & Dr.\ Mongkol Ekpanyapong \\[-0.8em]
-                             & Dr.\ Manukid Parnichkun \\\\
+                             & Prof.\ Manukid Parnichkun \\\\
 
 % UNCOMMENT THE LINES BELOW IF YOU HAVE THE EXTERNAL EXAMINER.
 %      External Examiner:     & Prof.\ YOUR EXTERNAL EXAMINER \\[-0.8em]
@@ -66,46 +66,55 @@ requirements for the degree of\\ Master of Engineering in Computer Science
 \vfill
 
 %====================== ACKNOWLEDGEMENTS ======================
-%\newpage
-%\pagestyle{plain}
-%addcontentsline{toc}{section}{Acknowledgments}
-%\onecolumn % Single-column.
-%\if@twoside\else\raggedbottom\fi % Ragged bottom unless twoside option.
-%\setlength{\footskip}{8mm}
-%\begin{center}
-%{
-%  \large \bf Acknowledgments\\ \vskip 1em
-%}
-%\vskip 1em
-%\end{center}
-%\singlespace
-%\doublespace
-%\hspace{8.5mm}
-%\vspace{-1em}
+\newpage
+\pagestyle{plain}
+\addcontentsline{toc}{section}{Acknowledgments}
+\onecolumn % Single-column.
+\if@twoside\else\raggedbottom\fi % Ragged bottom unless twoside option.
+\setlength{\footskip}{8mm}
+\begin{center}
+{
+  \large \bf Acknowledgments\\ \vskip 1em
+}
+\vskip 1em
+\end{center}
+\singlespace
+\doublespace
+\hspace{8.5mm}
+\vspace{-1em}
 
-%Write your touching message here..
+I want to thank my advisor Dr. Matthew Dailey for his precious help during this research work and all the committee members for their advice and remarks.\\
+
+I also want to thank my family for all they brought me.\\
+
+In particular, I want to thank my little brother Maximilien and my little sister Melanie. It is for them that I work and it is thank to them that I smile.
+
 
 %====================== ABSTRACT ======================
-%\newpage
-%\pagestyle{plain}
-%\addcontentsline{toc}{section}{Abstract}
-%\onecolumn % Single-column.
-%\if@twoside\else\raggedbottom\fi % Ragged bottom unless twoside option.
+\newpage
+\pagestyle{plain}
+\addcontentsline{toc}{section}{Abstract}
+\onecolumn % Single-column.
+\if@twoside\else\raggedbottom\fi % Ragged bottom unless twoside option.
 
-%\setlength{\footskip}{8mm}
+\setlength{\footskip}{8mm}
 
-%\begin{center}
-%{\large \bf Abstract \\ \vskip 1em}
-%\vskip 1em
-%\end{center}
-%\singlespace
-%\doublespace
-%\hspace{8.5mm}
-%\vspace{-1em}
+\begin{center}
+{\large \bf Abstract \\ \vskip 1em}
+\vskip 1em
+\end{center}
+\singlespace
+\doublespace
+\hspace{8.5mm}
+\vspace{-1em}
 
-%Abstract here..
 
-%\setlength{\parskip}{0pt} 
+The problem of recognizing a previously identified criminal, hoping to follow him or her through video cameras feeds is a key issue. However, police require a great deal of human resources to perform this task. Automating the face verification process in surveillance video seems to be a feasible solution to this problem. Deep learning algorithms have recently reached particularly high levels of accuracy in automated face verification. For example, recent approaches reached over 98\% accuracy on the \enquote{Labeled Faces in the Wild} (LFW) database. The goal of this research is to explore the possibility of adapting such methods to the particular conditions and constraints of video surveillance. I performed experiments on a database of surveillance videos acquired in a crowded shopping mall. With the neural network architecture described in this article, an accuracy of 88.04\% was reached on the database.\\
+
+Keywords: face verification, surveillance video, deep learning, deep neural network, convolutional neural network.
+
+
+\setlength{\parskip}{0pt} 
 %======================= Table of Contents =========================
 \newpage
 \addcontentsline{toc}{section}{Table of Contents}
