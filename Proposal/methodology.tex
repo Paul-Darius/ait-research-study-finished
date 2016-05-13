@@ -70,7 +70,7 @@ Once the process is over, a \enquote{Database} directory is created with one dir
 The framework that will be presented in the next section requires two files to work: a \texttt{train.txt} file and a \texttt{test.txt} file. Their role is trivially linked to their name in a supervised learning process.
 
 \subsection{Case of direct face identification}
- In the case of direct face identification, each of the train.txt and test.txt files share the same structure:
+ In the case of direct face identification, each of the \texttt{train.txt} and \texttt{test.txt} files share the same structure:
 
 \begin{verbatim}
 /adress/of/the/training/image1.jpg label1\newline
@@ -84,9 +84,6 @@ The labels are assigned automatically using the simple tracking method described
 The labels of the researchers were obtained by automatically tracking then manually merging tracks of the same researcher in different video segments.
 
 \subsection{Face tracking}
-
-
-
 
 \begin{algorithm}[H]
 \For{each video in the database}{
@@ -121,14 +118,14 @@ A representation of the final database is given below:
 
 \subsection{Case of a \enquote{Same/Not same} model}
 
-In the case of a \enquote{Same/Not same} model, the problem was a bit different. A slightly strange structure is best for this model. A solution was to generate two files for training and two files for testing. Let's name them train1.txt, train2.txt, and test1.txt and test2.txt. Their individual structure are as explained before.
+In the case of a \enquote{Same/Not same} model, the problem was a bit different. A slightly unusual structure is best for this model. The solution is to generate two files for training and two files for testing. Let's name them \texttt{train1.txt}, \texttt{train2.txt}, and \texttt{test1.txt} and \texttt{test2.txt}. Their individual structure are as explained before.
 
 \blockquote{/adress/of/the/training/image1.jpg label1\newline
 /adress/of/the/training/image2.jpg label2\newline
 ...\newline
 /adress/of/the/training/imageN.jpg labelN}
 
-In line K, train1.txt and train2.txt contain respectively \enquote{address/to/file1K.jpg labelK} and \enquote{address/to/file2K.jpg labelK}. The labels are identical. However, the images are different. If both the images represent the same person, the label will be 1, and 0 otherwise. \texttt{test1.txt} and \texttt{test2.txt} will work the same way. Only one of the two labels are used for the supervised learning, the other one, being identical, is not used. The syntax of the training and testing files being fixed with Caffe, this solution seems to be the most adapted to the problem encountered with the \enquote{Same/Not Same} models.
+In line K, train1.txt and train2.txt contain respectively \enquote{address/to/file1K.jpg labelK} and \enquote{address/to/file2K.jpg labelK}. The labels are identical. However, the images are different. If both the images represent the same person, the label will be 1, and 0 otherwise. \texttt{test1.txt} and \texttt{test2.txt} will work the same way. Only one of the two labels are used for the supervised learning, the other one, being identical, is not used. The syntax of the training and testing files being fixed with Caffe, this solution seems to be the most adapted to the problem encountered with the \enquote{Same/Not Same} models. The fact that two face images are considered as different or identical is determined by the face tracking algorithm described above.
 
 
 \subsection{Conclusion}

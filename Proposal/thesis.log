@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.2.18)  11 MAY 2016 13:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.2.18)  13 MAY 2016 19:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -427,9 +427,6 @@ LaTeX Warning: Label `fig:mfm' multiply defined.
 LaTeX Warning: Label `fig:mfm' multiply defined.
 
 
-LaTeX Warning: Label `fig:mfm' multiply defined.
-
-
 LaTeX Warning: Label `fig:Siamese' multiply defined.
 
 ) (./conclusion.aux)
@@ -601,7 +598,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 121--1
  [4
 
 ] (./thesis.lof
-Overfull \hbox (6.4375pt too wide) in paragraph at lines 19--19
+Overfull \hbox (6.4375pt too wide) in paragraph at lines 18--18
  [][] []\OT1/ptm/m/n/12 Comparison with other state-of-the-art meth-ods on YTF.
  Ex-tracted 
  []
@@ -809,7 +806,7 @@ File: figures/databaserepresentation.png Graphic file (type png)
 
 <use figures/databaserepresentation.png>
 Package pdftex.def Info: figures/databaserepresentation.png used on input line 
-115.
+112.
 (pdftex.def)             Requested size: 287.37166pt x 241.70134pt.
  [15]
 
@@ -819,43 +816,43 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.120 \end{itemize}
+l.117 \end{itemize}
                    
 ? 
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.120 \end{itemize}
+l.117 \end{itemize}
                    
 ? 
 
-Overfull \hbox (41.13203pt too wide) in paragraph at lines 131--132
+Overfull \hbox (41.13203pt too wide) in paragraph at lines 128--129
 []\OT1/ptm/m/n/10.95 In line K, train1.txt and train2.txt con-tain re-spec-tive
 ly \  ad-dress/to/file1K.jpg la-belK" and \  ad-dress/to/file2K.jpg
  []
 
 ! Undefined control sequence.
-l.135 ...r the other to create the required \textt
+l.132 ...r the other to create the required \textt
                                                   {train.txt} and \texttt{te...
 
 ? 
 
-Underfull \hbox (badness 10000) in paragraph at lines 135--136
+Underfull \hbox (badness 10000) in paragraph at lines 132--133
 
  []
 
 [16 <./figures/databaserepresentation.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 142--143
+Underfull \hbox (badness 10000) in paragraph at lines 139--140
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 147--148
+Underfull \hbox (badness 10000) in paragraph at lines 144--145
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 154--155
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
 
  []
 
@@ -863,16 +860,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 154--155
 File: figures/logreg.jpg Graphic file (type jpg)
 
 <use figures/logreg.jpg>
-Package pdftex.def Info: figures/logreg.jpg used on input line 159.
+Package pdftex.def Info: figures/logreg.jpg used on input line 156.
 (pdftex.def)             Requested size: 168.62883pt x 233.2699pt.
 
 <figures/logregfile.png, id=103, 316.18124pt x 581.17125pt>
 File: figures/logregfile.png Graphic file (type png)
 
 <use figures/logregfile.png>
-Package pdftex.def Info: figures/logregfile.png used on input line 160.
+Package pdftex.def Info: figures/logregfile.png used on input line 157.
 (pdftex.def)             Requested size: 126.47025pt x 232.46437pt.
-) [18 <./figures/logreg.jpg> <./figures/logregfile.png>]
+) [18 <./figures/logreg.jpg> <./figures/logregfile.png>] [19]
 \openout2 = `results.aux'.
 
  (./results.tex
@@ -897,11 +894,11 @@ l.14 ...train2.txt}, \textt{test1.txt}, and \textt
                                                   {test2.txt}, as described ...
 
 ? 
-[19
+[20
 
 
 
-] <figures/final_net.png, id=111, 1099.10625pt x 268.00125pt>
+] <figures/final_net.png, id=115, 1099.10625pt x 268.00125pt>
 File: figures/final_net.png Graphic file (type png)
 
 <use figures/final_net.png>
@@ -924,7 +921,7 @@ l.40 \end{itemize}
 l.40 \end{itemize}
                   
 ? 
-<figures/architecture.png, id=112, 742.775pt x 643.40375pt>
+<figures/architecture.png, id=116, 742.775pt x 643.40375pt>
 File: figures/architecture.png Graphic file (type png)
 
 <use figures/architecture.png>
@@ -935,7 +932,7 @@ Overfull \hbox (4.821pt too wide) in paragraph at lines 46--48
  [][] 
  []
 
-[20 <./figures/final_net.png>]
+[21 <./figures/final_net.png>]
 
 ! LaTeX Error: \begin{document} ended by \end{itemize}.
 
@@ -952,79 +949,22 @@ l.51 \end{itemize}
 l.51 \end{itemize}
                   
 ? 
-<figures/mfm.png, id=118, 378.41376pt x 177.66376pt>
-File: figures/mfm.png Graphic file (type png)
- <use figures/mfm.png>
-Package pdftex.def Info: figures/mfm.png used on input line 59.
-(pdftex.def)             Requested size: 151.36281pt x 71.06424pt.
 
-[21 <./figures/architecture.png>]
-
-! LaTeX Error: \begin{document} ended by \end{itemize}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.64 \end{itemize}
-                  
-? 
-! Extra \endgroup.
-<recently read> \endgroup 
-                          
-l.64 \end{itemize}
-                  
-? 
-! Double superscript.
-l.68 Given a convolution layer \(C \in R^h^
-                                           w^2^n\), the MFM can be written :
-? 
-! Double superscript.
-l.68 Given a convolution layer \(C \in R^h^w^
-                                             2^n\), the MFM can be written :
-? 
-! Double superscript.
-l.68 Given a convolution layer \(C \in R^h^w^2^
-                                               n\), the MFM can be written :
-? 
-<figures/equ.png, id=123, 266.9975pt x 63.23625pt>
-File: figures/equ.png Graphic file (type png)
- <use figures/equ.png>
-Package pdftex.def Info: figures/equ.png used on input line 72.
-(pdftex.def)             Requested size: 106.79709pt x 25.29404pt.
-
-
-! LaTeX Error: \begin{document} ended by \end{itemize}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.76 \end{itemize}
-                  
-? 
-! Extra \endgroup.
-<recently read> \endgroup 
-                          
-l.76 \end{itemize}
-                  
-? 
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--87
+Underfull \hbox (badness 10000) in paragraph at lines 57--58
 
  []
 
-<figures/lfw.png, id=124, 751.80875pt x 313.17pt>
+[22 <./figures/architecture.png>]
+<figures/lfw.png, id=125, 751.80875pt x 313.17pt>
 File: figures/lfw.png Graphic file (type png)
  <use figures/lfw.png>
-Package pdftex.def Info: figures/lfw.png used on input line 100.
+Package pdftex.def Info: figures/lfw.png used on input line 71.
 (pdftex.def)             Requested size: 451.08871pt x 187.90344pt.
 
-Overfull \hbox (10.24129pt too wide) in paragraph at lines 100--102
+Overfull \hbox (10.24129pt too wide) in paragraph at lines 71--73
  [][] 
  []
 
-[22 <./figures/mfm.png> <./figures/equ.png>]
 
 ! LaTeX Error: \begin{document} ended by \end{itemize}.
 
@@ -1032,19 +972,19 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.105 \end{itemize}
-                   
+l.76 \end{itemize}
+                  
 ? 
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.105 \end{itemize}
-                   
+l.76 \end{itemize}
+                  
 ? 
-<figures/ytf.png, id=134, 1043.9pt x 382.42876pt>
+<figures/ytf.png, id=126, 1043.9pt x 382.42876pt>
 File: figures/ytf.png Graphic file (type png)
  <use figures/ytf.png>
-Package pdftex.def Info: figures/ytf.png used on input line 110.
+Package pdftex.def Info: figures/ytf.png used on input line 81.
 (pdftex.def)             Requested size: 313.17241pt x 114.7295pt.
 
 
@@ -1054,22 +994,23 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.115 \end{itemize}
-                   
+l.86 \end{itemize}
+                  
 ? 
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.115 \end{itemize}
-                   
+l.86 \end{itemize}
+                  
 ? 
 [23 <./figures/lfw.png> <./figures/ytf.png>]
-<figures/result.png, id=140, 562.1pt x 421.575pt>
+<figures/result.png, id=132, 562.1pt x 421.575pt>
 File: figures/result.png Graphic file (type png)
  <use figures/result.png>
-Package pdftex.def Info: figures/result.png used on input line 132.
+Package pdftex.def Info: figures/result.png used on input line 103.
 (pdftex.def)             Requested size: 393.46732pt x 295.10048pt.
 
+[24]
 
 ! LaTeX Error: \begin{document} ended by \end{itemize}.
 
@@ -1077,22 +1018,22 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.137 \end{itemize}
+l.108 \end{itemize}
                    
 ? 
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.137 \end{itemize}
+l.108 \end{itemize}
                    
 ? 
-<figures/result_compared.png, id=141, 694.595pt x 568.1225pt>
+<figures/result_compared.png, id=136, 694.595pt x 568.1225pt>
 File: figures/result_compared.png Graphic file (type png)
 
 <use figures/result_compared.png>
-Package pdftex.def Info: figures/result_compared.png used on input line 143.
+Package pdftex.def Info: figures/result_compared.png used on input line 114.
 (pdftex.def)             Requested size: 277.83307pt x 227.24496pt.
- [24 <./figures/result.png (PNG copy)>]
+ [25 <./figures/result.png (PNG copy)>]
 
 ! LaTeX Error: \begin{document} ended by \end{itemize}.
 
@@ -1100,27 +1041,27 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.148 \end{itemize}
+l.119 \end{itemize}
                    
 ? 
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.148 \end{itemize}
+l.119 \end{itemize}
                    
 ? 
-<figures/histograms.jpg, id=145, 924.45375pt x 559.08875pt>
+<figures/histograms.jpg, id=140, 924.45375pt x 559.08875pt>
 File: figures/histograms.jpg Graphic file (type jpg)
 
 <use figures/histograms.jpg>
-Package pdftex.def Info: figures/histograms.jpg used on input line 154.
+Package pdftex.def Info: figures/histograms.jpg used on input line 125.
 (pdftex.def)             Requested size: 462.22574pt x 279.54369pt.
 
-Overfull \hbox (21.37831pt too wide) in paragraph at lines 154--156
+Overfull \hbox (21.37831pt too wide) in paragraph at lines 125--127
  [][] 
  []
 
-[25 <./figures/result_compared.png>]
+[26 <./figures/result_compared.png>]
 
 ! LaTeX Error: \begin{document} ended by \end{itemize}.
 
@@ -1128,22 +1069,22 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.159 \end{itemize}
+l.130 \end{itemize}
                    
 ? 
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.159 \end{itemize}
+l.130 \end{itemize}
                    
 ? 
-<figures/ROC_help.png, id=150, 722.7pt x 542.025pt>
+<figures/ROC_help.png, id=146, 722.7pt x 542.025pt>
 File: figures/ROC_help.png Graphic file (type png)
  <use figures/ROC_help.png>
-Package pdftex.def Info: figures/ROC_help.png used on input line 166.
+Package pdftex.def Info: figures/ROC_help.png used on input line 137.
 (pdftex.def)             Requested size: 361.3491pt x 271.01183pt.
 
-[26 <./figures/histograms.jpg>]
+[27 <./figures/histograms.jpg>]
 
 ! LaTeX Error: \begin{document} ended by \end{itemize}.
 
@@ -1151,41 +1092,41 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.171 \end{itemize}
+l.142 \end{itemize}
                    
 ? 
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.171 \end{itemize}
+l.142 \end{itemize}
                    
 ? 
 
-Underfull \hbox (badness 10000) in paragraph at lines 174--176
+Underfull \hbox (badness 10000) in paragraph at lines 145--147
 
  []
 
 ! Misplaced alignment tab character &.
 <argument> Face detection &
                             overlapping
-l.183 \subsection{Face detection & overlapping}
+l.154 \subsection{Face detection & overlapping}
                                                
 ? 
-[27 <./figures/ROC_help.png>] [28]
-Underfull \hbox (badness 10000) in paragraph at lines 215--218
+[28 <./figures/ROC_help.png>] [29]
+Underfull \hbox (badness 10000) in paragraph at lines 186--189
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 233--234
+Underfull \hbox (badness 10000) in paragraph at lines 204--205
 
  []
 
-[29] <figures/matrix.png, id=168, 578.16pt x 433.62pt>
+[30] <figures/matrix.png, id=167, 578.16pt x 433.62pt>
 File: figures/matrix.png Graphic file (type png)
 
 <use figures/matrix.png>
-Package pdftex.def Info: figures/matrix.png used on input line 244.
+Package pdftex.def Info: figures/matrix.png used on input line 215.
 (pdftex.def)             Requested size: 404.70924pt x 303.53192pt.
 
 
@@ -1195,203 +1136,119 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.249 \end{itemize}
+l.220 \end{itemize}
                    
 ? 
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.249 \end{itemize}
+l.220 \end{itemize}
                    
 ? 
 
-Underfull \hbox (badness 10000) in paragraph at lines 253--259
+Underfull \hbox (badness 10000) in paragraph at lines 224--230
 
  []
 
-[30 <./figures/matrix.png>]) [31] [32]
+[31 <./figures/matrix.png>]) [32] [33]
 \openout2 = `conclusion.aux'.
 
  (./conclusion.tex
 \relax \fontsize {14.4}{15}\selectfont {Chapter} 5.
-[33
+[34
 
 
 
 ]
-Overfull \hbox (29.52574pt too wide) in paragraph at lines 21--23
-\OT1/ptm/m/n/10.95 Generate Database : chmod +x gen-er-ate[]database.sh; ./gen-
-er-ate[]database.sh /path/to/database/ [demo[]mode] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 21--23
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--26
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--28
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 30--31
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 32--33
-
- []
-
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--50
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--52
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 53--54
-
- []
-
-[34]
-Underfull \hbox (badness 10000) in paragraph at lines 55--56
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 57--58
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 63--64
-
- []
-
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no ™ in font ptmr7t!
-
-Underfull \hbox (badness 10000) in paragraph at lines 65--66
-
- []
-
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no ™ in font ptmr7t!
-
-Underfull \hbox (badness 10000) in paragraph at lines 68--70
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 71--73
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 74--75
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
 
  []
 
 [35]
-Underfull \hbox (badness 10000) in paragraph at lines 87--90
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
 
  []
 
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 91--92
-
+Overfull \hbox (25.62201pt too wide) in paragraph at lines 85--85
+[]\OT1/pcr/m/n/10.95 mv Caffe\_Files/full\_database.txt Caffe\_Files/full\_data
+base\_old.txt[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--94
-
- []
-
-
-Overfull \hbox (45.53479pt too wide) in paragraph at lines 95--96
-\OT1/ptm/m/n/10.95 src/face[]id/caffe[]ftr.py src/face[]id/face[]verification[]
-experiment-master/proto/LightenedCNN[]A[]deploy.prototxt 
- []
-
-
-Overfull \hbox (62.35278pt too wide) in paragraph at lines 95--96
-\OT1/ptm/m/n/10.95 Caffe[]Files/full[]database.txt prob src/face[]id/face[]veri
-fication[]experiment-master/results/mbk[]result[]CNN[]AA.mat 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 95--96
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 97--98
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 104--105
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 111--115
-
+Overfull \hbox (65.04196pt too wide) in paragraph at lines 86--86
+[]\OT1/pcr/m/n/10.95 mv Caffe\_Files/labelised\_full\_database.txt Caffe\_Files
+/full\_database.txt[] 
  []
 
 [36]
-Underfull \hbox (badness 10000) in paragraph at lines 121--122
+Overfull \hbox (66.33325pt too wide) in paragraph at lines 102--103
+\OT1/ptm/m/n/10.95 To gen-er-ate the file \OT1/pcr/m/n/10.95 src/face[]id/face[
+]verification[]experiment-master/code/mbk[]pairs.mat 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--103
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 123--124
+Overfull \hbox (42.70393pt too wide) in paragraph at lines 126--127
+\OT1/pcr/m/n/10.95 src/face[]id/face[]verification[]experiment-master/results/m
+bk[]result[]CNN[]A.mat 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--127
+
+ []
+
+[37]
+Underfull \hbox (badness 10000) in paragraph at lines 145--149
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 125--126
+Underfull \hbox (badness 10000) in paragraph at lines 154--155
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 127--130
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 131--135
+Underfull \hbox (badness 10000) in paragraph at lines 162--164
 
  []
 
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no œ in font ptmr7t!
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no  in font ptmr7t!
-
-Underfull \hbox (badness 10000) in paragraph at lines 136--137
+[38]
+Underfull \hbox (badness 10000) in paragraph at lines 169--170
 
  []
 
-) [37] [38] (./thesis.bbl) [39
+
+Underfull \hbox (badness 10000) in paragraph at lines 175--176
+
+ []
+
+) [39] (./thesis.bbl) [40
 
 
 ] (./thesis.aux (./frontstuff.aux) (./intro.aux)
@@ -1401,10 +1258,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 7887 strings out of 493089
- 112758 string characters out of 6134842
- 224693 words of memory out of 5000000
- 11138 multiletter control sequences out of 15000+600000
+ 7876 strings out of 493089
+ 112577 string characters out of 6134842
+ 224654 words of memory out of 5000000
+ 11129 multiletter control sequences out of 15000+600000
  25927 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,19n,39p,1350b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1421,10 +1278,10 @@ xmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2015/texmf-dist
 /fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/typ
 e1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/tim
 es/utmri8a.pfb>
-Output written on thesis.pdf (44 pages, 8730179 bytes).
+Output written on thesis.pdf (45 pages, 8713598 bytes).
 PDF statistics:
- 245 PDF objects out of 1000 (max. 8388607)
- 138 compressed objects within 2 object streams
+ 244 PDF objects out of 1000 (max. 8388607)
+ 140 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 131 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 121 words of extra memory for PDF output out of 10000 (max. 10000000)
 

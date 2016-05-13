@@ -18,78 +18,49 @@ Before the proposal, some parts of the solution had been built.
 \section{Evolution after the proposal}
 After the proposal, the direction taken by the study slightly evolved.
 \begin{itemize}
-\item A python script to interpret the results of the siamese training was written. Its role was to determine a threshold for the distance between two images as described in the previous chapter. The results were not satisfying as the output of each image through the siamese network always gave zero as a result. The problem was probably that only the images representing the researchers were labeled.
-\item Consequently the code for face detection was modified and adapted to overlap calculation. The scripts for the database generation were modified accordingly. Then the siamese network was trained again considering the fact that there were a large range of classes with few images in each. However again, the results were not satisfying and the exact cause of it remains uncertain. An error in the code is unprobable as a very similar code was used for digit recognition and was working perfectly fine. The most probable cause is the non convergence of the network.
-\item Then, the decision was taken to study an other network. The idea was to test the MBK database on a pre-trained network on which the data could be directly used with only minor modifications. A particularly light and efficient \enquote{Same/Not Same} ---or face verification--- network which reached state-of-the-art was selected. The details concerning this network's architecture and the obtained results were particularly interesting and are explained in the next sections.
+\item A Python script to interpret the results of the Siamese training was written. Its role was to determine a threshold for the distance between two images as described in the previous chapter. The results were not satisfying as the output vector for each image through the Siamese network was always a 0 vector. I hypothesized that the problem was that only the images representing the researchers were labeled.
+\item Consequently, I adapted the code for face detection to make it a face tracker. The scripts for the database generation were modified accordingly. Then the Siamese network was trained again considering the fact that there were a large range of classes with few images in each. However, again, the results were not satisfying, and the exact cause of this remains uncertain. An error in the code is improbable, as very similar code was used for digit recognition and worked fine. The most probable cause is the non-convergence of the network.
+\item Then, I studied an other network. The idea was to test a pre-trained network on which the MBK database could be used with only minor modifications. A particularly light and efficient face verification network which reached state-of-the-art was selected. The details concerning this network's architecture and the obtained results were particularly interesting and are explained in the next sections.
 \end{itemize}
 
 \section{Network used in this research}
 
-Wu, He and Sun published a light convolutional neural network for face verification (November 2015). Its particularity is that it is extremely light but still reaches state-of-the-art results.
+Wu, He and Sun (2015) published a light convolutional neural network for face verification. Its particularity is that it is extremely light but still reaches state-of-the-art results.
 
 \subsection{Architecture}
-The following figure describes its architecture.
+Figure 4.1 describes the architecture of the Wu, He and Sun model.
 
 \begin{figure}[!ht]
   \centering
   \includegraphics[scale=0.4]{figures/final_net.png}  
-  \caption[Architecture of the lightened convolution network. Extracted from Wu, He, Sun, 2015.]{Architecture of the lightened convolution network. Extracted from Wu, He, Sun, 2015.}
+  \caption[Architecture of the lightened convolution network. Extracted from Wu, He, Sun, 2015.]{Architecture of the lightened convolution neural network. Extracted from Wu, He, Sun, 2015.}
   \protect\label{fig:Siamese}
 \end{figure}
 \FloatBarrier
 \end{itemize}
 
-First, as an input, a Gray-scale face image is provided. The article suggests the use of two possible models. The one used in this research is built with 4 convolution layer with Max-Feature-Map activation functions, 4 max-pooling layers and 2 fully connected layers. The details are given in the following figure.
+First, as an input, a gray-scale face image is provided. The article suggests the use of two possible models. The one used in this research is built with 4 convolution layer with Max-Feature-Map activation functions, 4 max-pooling layers and 2 fully connected layers. The details are given in Figure 4.2.
 
 \begin{figure}[!ht]
   \centering
   \includegraphics[scale=0.6]{figures/architecture.png}  
   \protect\label{fig:architecture}
-  \caption[Details on the architecture of the lightened convolution networks. Extracted from Wu, He, Sun, 2015.]{Details on the architecture of the lightened convolution networks. Extracted from Wu, He, Sun, 2015.}
+  \caption[Details of the architecture of the lightened convolutional neural networks. Extracted from Wu, He, Sun (2015).]{Details of the architecture of the lightened convolutional neural networks. Extracted from Wu, He, Sun (2015).}
 \end{figure}
 \FloatBarrier
 \end{itemize}
 
 \FloatBarrier
-
-The MFM function works as explained in the following figure.
-
-\begin{figure}[!ht]
-  \centering
-  \includegraphics[scale=0.4]{figures/mfm.png}  
-  \protect\label{fig:mfm}
-  \caption[The MFM activation function used on a convolution layer. Extracted from Wu, He, Sun, 2015.]{The MFM activation function on a convolution layer. Extracted from Wu, He, Sun, 2015.}
-\end{figure}
-\FloatBarrier
-\end{itemize}
-
-\FloatBarrier
-
-Given a convolution layer \(C \in R^h^w^2^n\), the MFM can be written :
-
-\begin{figure}[!ht]
-  \centering
-  \includegraphics[scale=0.4]{figures/equ.png}  
-  \protect\label{fig:equ}
-\end{figure}
-\FloatBarrier
-\end{itemize}
-
-\FloatBarrier
-
-\(2n\) being the channel of the input convolution layer, \(1 \leq i \leq h\) and \(1 \leq j \leq w\).
-
-Given a face image as an input, the output of the neural network is an array of float values called features. To verify that the face on an image is the same as the face on another one, the cosine of their corresponding feature array is computed and is compared to a threshold.
 
 \subsection{Training}
 
 The network was trained on a GTX980 during two weeks on the CASIA-WebFace dataset.\\
 
-The Dropout algorithm is used for the fully connected layers with a ration of 0.7. The momentum is set to 0.9, and the weight decay to 5e-4 except for fc2 layer for which the rate is set to 5e-3. The learning rate is set to 1e-3 and its value is reduced step by step to finally reach 5e-5. The parameter initialization for the convolution layers is Xavier and it is Gaussian for the fully connected layers.
+The Dropout algorithm is used for the fully connected layers with a ratio of 0.7. The momentum was set to 0.9, and the weight decay to 5e-4 except for fc2 layer for which the rate is set to 5e-3. The learning rate was set to 1e-3, and its value was reduced step by step to finally reach 5e-5. The parameter initialization for the convolution layers was Xavier and it was Gaussian for the fully connected layers.
 
 \subsection{Runtime performance}
 
-To extract one face image representation on a single core i7-4790, 71ms on the first model and 67ms on the second one are needed. This implies the model can be used on real-time applications.
+To extract one face image representation on a single core i7-4790, 71ms on the first model and 67ms on the second one are needed. This implies the model can be used in real-time applications.
 
 \subsection{Results}
 
@@ -99,7 +70,7 @@ As said previously, these networks reach state-of-the-art results. They were tra
   \centering
   \includegraphics[scale=0.6]{figures/lfw.png}  
   \protect\label{fig:mfm}
-  \caption[Comparison with other state-of-the-art methods on LFW. Extracted from Wu, He, Sun, 2015.]{Comparison with other state-of-the-art methods on LFW. Extracted from Wu, He, Sun, 2015.}
+  \caption[Comparison with other state-of-the-art methods on LFW. Extracted from Wu, He, Sun (2015).]{Comparison with other state-of-the-art methods on LFW. Extracted from Wu, He, Sun (2015).}
 \end{figure}
 \FloatBarrier
 \end{itemize}
@@ -109,7 +80,7 @@ As said previously, these networks reach state-of-the-art results. They were tra
   \centering
   \includegraphics[scale=0.3]{figures/ytf.png}  
   \protect\label{fig:mfm}
-  \caption[Comparison with other state-of-the-art methods on YTF. Extracted from Wu, He, Sun, 2015.]{Comparison with other state-of-the-art methods on YTF. Extracted from Wu, He, Sun, 2015.}
+  \caption[Comparison with other state-of-the-art methods on YTF. Extracted from Wu, He, Sun (2015).]{Comparison with other state-of-the-art methods on YTF. Extracted from Wu, He, Sun (2015).}
 \end{figure}
 \FloatBarrier
 \end{itemize}

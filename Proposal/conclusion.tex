@@ -13,31 +13,38 @@ Several improvements can be made.
 \end{itemize}
 
 \section{How to use this software}
-This section is used as a README text for the project, available on GitHub. The address is:\\ http://github.com/Paul-Darius/ait-research-study-finished\newpage
+This section is used as a \texttt{README} text for the project, available on GitHub. The address is:\\ \texttt{http://github.com/Paul-Darius/ait-research-study-finished}\newpage
 \FloatBarrier
 
 \subsection{Face detection}
 
-Installation : chmod+x install.sh ; ./install.sh\\
-Generate Database : chmod +x generate\_database.sh; ./generate\_database.sh /path/to/database/ [demo\_mode]\\
+Installation : 
+\begin{verbatim}
+chmod+x install.sh ; ./install.sh
+\end{verbatim}
+Generate Database : 
+\begin{verbatim}
+chmod +x generate\_database.sh;
+./generate\_database.sh /path/to/database/ [demo\_mode]
+\end{verbatim}
+
+- \texttt{/path/to/database} is either an absolute or relative (from the current directory) path to the directory containing all the videos.
+
+- \texttt{demo\_mode} is an option to decide whether you want to see in live and save in the Database directory a video showing you the database generation or not. If the demo mode is set, the generation will be slower but you will see in a window what the algorithm is doing. If the value is not set or set to 0, the database will be generated without video. If the value is set to any other number, the demo mode is activated.
 
 
-- /path/to/database is either an absolute or relative (from the current directory) path to the directory containing all the videos.\\
+The \texttt{.jpg} files are now saved with this structure:
 
-- demo\_mode is an option to decide whether you want to see in live and save in the Database directory a video showing you the database generation or not. If the demo mode is set, the generation will be slower but you will see in a window what the algorithm is doing. If the value is not set or set to 0, the database will be generated without video. If the value is set to any other number, the demo mode is activated.\\
-
-
-The .jpg files are now saved with this structure:\\
-
-Main\_Directory/Database/video\_name/LabelXFrameYFaceZ[Profile].jpg\\
-
+\begin{verbatim}
+Main\_Directory/Database/video\_name/LabelXFrameYFaceZ[Profile].jpg
+\end{verbatim}
 \begin{itemize}
-\item Database: main directory of the files.
-\item video\_name: the name of the video where the current face was seen.
-\item X: The label of the face. The face detection algorithm follows the faces. If a person appears walking on several successive frames, the algorithm will know that each picture of the person’s face corresponds to the same person and will save the images representing the same face on different frames with the same label.
-\item Y: the frame number
-\item Z: The current picture is the Z-th detected face of the Y-th frame.
-\item Profile: appears if and only if the detected face is in profile.
+\item \texttt{Database}: main directory of the files.
+\item \texttt{video\_name}: the name of the video where the current face was seen.
+\item \texttt{X}: The label of the face. The face detection algorithm follows the faces. If a person appears walking on several successive frames, the algorithm will know that each picture of the person’s face corresponds to the same person and will save the images representing the same face on different frames with the same label.
+\item \texttt{Y}: the frame number
+\item \texttt{Z}: The current picture is the Z-th detected face of the Y-th frame.
+\item \texttt{Profile}: appears if and only if the detected face is in profile.
 \end{itemize}
 
 Note that the automatic labeling procedure:
@@ -48,97 +55,134 @@ Note that the automatic labeling procedure:
 
 Consequently, the labels may have to be reviewed.\\
 
-A .txt file is also provided. It is saved in:\\
-
-Main\_Directory/Caffe\_Files/full\_database.txt\\
-
+A \texttt{.txt} file is also provided. It is saved in:\\
+\begin{verbatim}
+Main\_Directory/Caffe\_Files/full\_database.txt
+\end{verbatim}
 Each line represent a specific .jpg image of of this file has the following structure:\\
-
-Main\_Directory/Database/videoM/LabelX[Profile]FrameYFaceZ.jpg B\\
-
-B is automatically computed from M and X so that the label appearing in the file can be used directly by caffe.
+\begin{verbatim}
+Main\_Directory/Database/videoM/LabelX[Profile]FrameYFaceZ.jpg B
+\end{verbatim}
+\texttt{B} is automatically computed from \texttt{M} and \texttt{X} so that the label appearing in the file can be used directly by caffe.
 
 \subsection{How to manually improve the face detection?}
 
-Supposing that the automatic labeling was not efficient enough for your particular case -typically if some main faces appeared on several videos-, you may have to manually change the labels of the concerned images.\\
+Supposing that the automatic labeling was not efficient enough for your particular case -typically if some main faces appeared on several videos-, you may have to manually change the labels of the concerned images.
 
-Let’s assume you have to modify few labels to face this kind of issues. If you manually changed the name of some images so that the label of each file is the first character of the file name (ie for example 1Frame2.jpg has label 1 and 4Frame23.jpg has label 4), then, the next commands will generate a new database file called labelised\_full\_database.txt in the directory Caffe\_File with the required labels. Note that it works only with labels between 1 to 9. With a minor modification, more labels can be modified. Other few pictures with labels 1 to 9 can be manually modified directly in the file if needed.\\
+Let’s assume you have to modify few labels to face this kind of issues. If you manually changed the name of some images so that the label of each file is the first character of the file name (ie for example \texttt{1Frame2.jpg} has label \texttt{1} and \texttt{4Frame23.jpg} has label \texttt{4}), then, the next commands will generate a new database file called \texttt{labelised\_full\_database.txt} in the directory \texttt{Caffe\_File} with the required labels. Note that it works only with labels between 1 to 9. With a minor modification, more labels can be modified. Other few pictures with labels 1 to 9 can be manually modified directly in the file if needed.
 
 
-First, let’s regenerate full\_database.py with the new names:\\
-- python src/python/fulldbfile.py\\
-
-Then the script:\\
-- python src/python/labelisation.py\\
-
-You simply have to copy paste that to continue the work: \\
-
-- mv Caffe\_Files/full\_database.txt Caffe\_Files/full\_database\_old.txt\\
-- mv Caffe\_Files/labelised\_full\_database.txt Caffe\_Files/full\_database.txt
-
+First, let’s regenerate \texttt{full\_database.py} with the new names:
+\begin{verbatim}
+python src/python/fulldbfile.py
+\end{verbatim}
+Then the script:
+\begin{verbatim}
+python src/python/labelisation.py
+\end{verbatim}
+You simply have to copy paste that to continue the work:
+\begin{verbatim}
+mv Caffe\_Files/full\_database.txt Caffe\_Files/full\_database\_old.txt
+mv Caffe\_Files/labelised\_full\_database.txt Caffe\_Files/full\_database.txt
+\end{verbatim}
 \subsection{To use the face verification network}
 
-Modify the database with this script for preprocessing:\\
-- python src/python/preprocessing\_face\_id.py
-
+Modify the database with this script for preprocessing:
+\begin{verbatim}
+python src/python/preprocessing\_face\_id.py
+\end{verbatim}
 
 \subsection{To test the newtork}
 
-We only use the full\_db.txt file.\\
-First we generate the pairs readable by matlab with:\\
-- python src/python/pairs\_generator.py\\
+We only use the \texttt{full\_db.txt} file.\\
+First we generate the pairs readable by matlab with:
+\begin{verbatim}
+python src/python/pairs\_generator.py
+\end{verbatim}
+To generate the file \texttt{src/face\_id/face\_verification\_experiment-master/code/mbk\_pairs.mat}\\
 
-To generate the file src/face\_id/face\_verification\_experiment-master/code/mbk\_pairs.mat\\
+Then:
 
-Then:\\
+\begin{verbatim}
+python
 
-- python\\ src/face\_id/caffe\_ftr.py src/face\_id/face\_verification\_experiment-master/proto/LightenedCNN\_A\_deploy.prototxt\\ src/face\_id/face\_verification\_experiment-master/model/LightenedCNN\_A.caffemodel\\ .\\ Caffe\_Files/full\_database.txt prob src/face\_id/face\_verification\_experiment-master/results/mbk\_result\_CNN\_AA.mat\\
+src/face\_id/caffe\_ftr.py 
 
-To generate the file src/face\_id/face\_verification\_experiment-master/results/mbk\_result\_CNN\_A.mat\\
+src/face\_id/face\_verification\_experiment-
+master/proto/LightenedCNN\_A\_deploy.prototxt
 
+src/face\_id/face\_verification\_experiment-
+master/model/LightenedCNN\_A.caffemodel
 
-- In matlab, launch face\_verification\_experiment-master/code/evaluation.m to evaluate the work.
+.
 
+Caffe\_Files/full\_database.txt
+
+prob
+
+src/face\_id/face\_verification\_experiment-
+master/results/mbk\_result\_CNN\_AA.mat
+\end{verbatim}
+To generate the file\\ \texttt{src/face\_id/face\_verification\_experiment-master/results/mbk\_result\_CNN\_A.mat}\\
+
+- In matlab, launch:
+
+\begin{verbatim}
+face\_verification\_experiment-master/code/evaluation.m
+\end{verbatim}
+
+to evaluate the work.
 \subsection{To use the face verification script}
 
-- python src/software/soft.py\\
-
-You will be asked the address of the pictures of the face of the person you want to recognise. The result is the faces which have been recognised in the Database directory. They are saved in a directory called Captured\_Faces.
+\begin{verbatim}
+python src/software/soft.py
+\end{verbatim}
+You will be asked the address of the pictures of the face of the person you want to recognise. The result is the faces which have been recognised in the Database directory. They are saved in a directory called \texttt{Captured\_Faces}.
 
 
 \subsection{To use the experimental script for face tracking with DLIB and then face verification}
 
-In src/software:\\
-- Copy the images of the criminal you want to find in the video in criminal\_pictures/\\
-- Copy the video you want to find the criminal in in video/\\
+In \texttt{src/software}:\\
+- Copy the images of the criminal you want to find in the video in \texttt{criminal\_pictures/}\\
+- Copy the video you want to find the criminal in in \texttt{video/}\\
 - python script.py\\
 
-The detected faces will be saved in detected/
-
+The detected faces will be saved in \texttt{detected/}
 
 \subsection{Informations about the Siamese Network}
 
 The Siamese Network does not work properly. However, you can try to recreate the experience I made by following these intructions:\\
 
-Generate Train and Validate caffe files : chmod +x trainandval.sh;  ./trainandval.sh [number\_of\_files]\\
+Generate Train and Validate caffe files : 
+\begin{verbatim}
+chmod +x trainandval.sh;  ./trainandval.sh [number\_of\_files]
+\end{verbatim}
+- number\_of\_files is an option. If it is set to 1, then only a \texttt{train.txt} file will be generated as a copy of \texttt{full\_database.txt}. If it is set to 2, then \texttt{train.txt} and \texttt{test.txt} will be generated. These two files will contain the same number of lines, i.e. the same number of files (plus or minus one). Finally, if it is set to 3, it will contain \texttt{train.txt}, \texttt{test.txt}, and \texttt{valid.txt}. The three files will have the same size.\\
 
-- number\_of\_files is an option. If it is set to 1, then only a train.txt file will be generated as a copy of full\_database.txt. If it is set to 2, then train.txt and test.txt will be generated. These two files will contain the same number of lines, i.e. the same number of files (plus or minus one). Finally, if it is set to 3, it will contain train.txt, test.txt, and valid.txt. The three files will have the same size.\\
-
-Files generation from train.txt and test.txt :\\
-For this usage, you should have done \enquote{./trainandval.sh 2} previously.\\
-- python src/python/create\_siamese\_db.py : It will create the train1.txt, train2.txt, test1.txt and test2.txt files required by the siamese network.\\
+Files generation from \texttt{train.txt} and \texttt{test.txt}:\\
+For this usage, you should have done \texttt{./trainandval.sh 2} previously.\\
+\begin{verbatim}
+python src/python/create\_siamese\_db.py
+\end{verbatim}
+will create the \texttt{train1.txt}, \texttt{train2.txt}, \texttt{test1.txt} and \texttt{test2.txt} files required by the siamese network.
 
 Then :\\
-- for name in Database/*/*.jpg; do\\
-convert -resize 256x256\! \$name \$name\\
-done\\
+\begin{verbatim}
+for name in Database/*/*.jpg; do
+convert -resize 256x256\! \$name \$name
+done
+\end{verbatim}
+The goal is to resize the images of the database. Modify the path \texttt{Database/*/*.jpg} if necessary.\\
 
-The goal is to resize the images of the database. Modify the path “Database/*/*.jpg” if necessary.\\
-
-- ./src/siamese/train\_siamese\_mbk.sh for training\\
-- python src/siamese/analyse.py for testing
-
+\begin{verbatim}
+./src/siamese/train\_siamese\_mbk.sh
+\end{verbatim}
+for training and:
+\begin{verbatim}
+python src/siamese/analyse.py
+\end{verbatim}
+for testing.
 
 \subsection{Other Scripts}
 
-src/python/5pt\_preprocess.py does not work properly. Initially it was meant to generate the preprocessing files required for face\_id to be used. Unhappily, the github page was in my opinion not documented enough and I did not have enough time to understand it. So I used an other more simple preprocessing technique, which seems to be working fine.
+\texttt{src/python/5pt\_preprocess.py} does not work properly. Initially it was meant to generate the preprocessing files required for face\_id to be used. Unhappily, the github page was in my opinion not documented enough and I did not have enough time to understand it. So I used an other more simple preprocessing technique, which seems to be working fine.

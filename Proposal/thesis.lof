@@ -12,13 +12,12 @@
 \contentsline {figure}{\numberline {3.3}{\ignorespaces An example of two faces extracted from the surveillance system. On the left, one of the target individuals. On the right, a typical customer of the shopping center.}}{14}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces The database after automatic labeling.}}{16}
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Logistic regression classifier definition with Caffe. Extracted from the official website of the framework.}}{18}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Architecture of the lightened convolution network. Extracted from Wu, He, Sun, 2015.}}{20}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Details on the architecture of the lightened convolution networks. Extracted from Wu, He, Sun, 2015.}}{21}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces The MFM activation function used on a convolution layer. Extracted from Wu, He, Sun, 2015.}}{22}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Comparison with other state-of-the-art methods on LFW. Extracted from Wu, He, Sun, 2015.}}{23}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Comparison with other state-of-the-art methods on YTF. Extracted from Wu, He, Sun, 2015.}}{23}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces ROC curve of the network on the MBK database.}}{24}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces ROC curve of other network on the YTF database. Extracted from DeepFace (Taigman, Yang, Ranzato, Wolf, 2014).}}{25}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Repartition of the positive and negative pairs according to their score.}}{26}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Calculation of the ROC curve. Extracted from Wikipedia.}}{27}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces The matrix of probabilities.}}{30}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Architecture of the lightened convolution network. Extracted from Wu, He, Sun, 2015.}}{21}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Details of the architecture of the lightened convolutional neural networks. Extracted from Wu, He, Sun (2015).}}{22}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Comparison with other state-of-the-art methods on LFW. Extracted from Wu, He, Sun (2015).}}{23}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Comparison with other state-of-the-art methods on YTF. Extracted from Wu, He, Sun (2015).}}{23}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces ROC curve of the network on the MBK database.}}{25}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces ROC curve of other network on the YTF database. Extracted from DeepFace (Taigman, Yang, Ranzato, Wolf, 2014).}}{26}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Repartition of the positive and negative pairs according to their score.}}{27}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Calculation of the ROC curve. Extracted from Wikipedia.}}{28}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces The matrix of probabilities.}}{31}
