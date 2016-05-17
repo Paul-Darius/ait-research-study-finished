@@ -1,12 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.2.18)  13 MAY 2016 19:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.2.18)  17 MAY 2016 10:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**thesis.tex
-(./thesis.tex
-LaTeX2e <2015/01/01>
-Babel <3.9l> and hyphenation patterns for 79 languages loaded.
-(./aitthesis.cls
+**\nonstopmode \input{thesis.tex}
+(./thesis.tex (./aitthesis.cls
 Document Class: aitthesis 2006/04/25 Asian Institute of Technology Thesis Class
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/report.cls
@@ -397,7 +394,10 @@ Type  H <return>  for immediate help.
                                                   
 l.861     {\caption@Continued@Float{#1}}}
                                          
-? 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 \c@ContinuedFloat=\count135
 )
 Package csquotes Info: Checking for multilingual support...
@@ -429,6 +429,24 @@ LaTeX Warning: Label `fig:mfm' multiply defined.
 
 LaTeX Warning: Label `fig:Siamese' multiply defined.
 
+
+LaTeX Warning: Label `fig:Siamese' multiply defined.
+
+
+LaTeX Warning: Label `fig:Siamese' multiply defined.
+
+
+LaTeX Warning: Label `fig:Siamese' multiply defined.
+
+
+LaTeX Warning: Label `fig:Siamese' multiply defined.
+
+
+LaTeX Warning: Label `fig:Siamese' multiply defined.
+
+
+LaTeX Warning: Label `fig:Siamese' multiply defined.
+
 ) (./conclusion.aux)
 
 ! Package natbib Error: Bibliography not compatible with author-year citations.
@@ -442,7 +460,9 @@ Type  H <return>  for immediate help.
                                                   
 l.29 ...mand\NAT@force@numbers{}\NAT@force@numbers
                                                   
-? 
+Check the bibliography entries for non-compliant syntax,
+or select author-year BibTeX style, e.g. plainnat
+
 )
 \openout1 = `thesis.aux'.
 
@@ -603,13 +623,13 @@ Overfull \hbox (6.4375pt too wide) in paragraph at lines 18--18
  Ex-tracted 
  []
 
-)
+[5
+
+])
 \tf@lof=\write4
 \openout4 = `thesis.lof'.
 
-) [5
-
-]
+) [6]
 \openout2 = `intro.aux'.
 
  (./intro.tex
@@ -648,7 +668,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--39
 
  []
 
-<figures/database.png, id=24, 1206.5075pt x 678.535pt>
+<figures/database.png, id=28, 1206.5075pt x 678.535pt>
 File: figures/database.png Graphic file (type png)
 
 <use figures/database.png>
@@ -671,7 +691,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 49--51
 
  (./literature.tex
 \relax \fontsize {14.4}{15}\selectfont {Chapter} 2.
-<figures/lenet.png, id=37, 1114.1625pt x 327.2225pt>
+<figures/lenet.png, id=40, 1114.1625pt x 327.2225pt>
 File: figures/lenet.png Graphic file (type png)
  <use figures/lenet.png>
 Package pdftex.def Info: figures/lenet.png used on input line 24.
@@ -695,7 +715,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--35
 
  []
 
-<figures/conv1.png, id=43, 956.57375pt x 449.68pt>
+<figures/conv1.png, id=46, 956.57375pt x 449.68pt>
 File: figures/conv1.png Graphic file (type png)
  <use figures/conv1.png>
 Package pdftex.def Info: figures/conv1.png used on input line 41.
@@ -705,26 +725,26 @@ Overfull \hbox (37.43828pt too wide) in paragraph at lines 41--42
  [][] 
  []
 
-<figures/conv2.png, id=44, 475.7775pt x 544.0325pt>
+<figures/conv2.png, id=47, 475.7775pt x 544.0325pt>
 File: figures/conv2.png Graphic file (type png)
  <use figures/conv2.png>
 Package pdftex.def Info: figures/conv2.png used on input line 51.
 (pdftex.def)             Requested size: 285.46869pt x 326.42201pt.
 
-[6 <./figures/conv1.png>] <figures/conv3.png, id=49, 196.735pt x 145.54375pt>
+[6 <./figures/conv1.png>] <figures/conv3.png, id=52, 196.735pt x 145.54375pt>
 File: figures/conv3.png Graphic file (type png)
 
 <use figures/conv3.png>
 Package pdftex.def Info: figures/conv3.png used on input line 60.
 (pdftex.def)             Requested size: 196.7345pt x 145.54338pt.
  [7 <./figures/conv2.png>]
-<figures/conv4.png, id=54, 913.4125pt x 464.73625pt>
+<figures/conv4.png, id=58, 913.4125pt x 464.73625pt>
 File: figures/conv4.png Graphic file (type png)
  <use figures/conv4.png>
 Package pdftex.def Info: figures/conv4.png used on input line 69.
 (pdftex.def)             Requested size: 365.35854pt x 185.8912pt.
 
-<figures/conv5.png, id=55, 690.58pt x 221.82875pt>
+<figures/conv5.png, id=59, 690.58pt x 221.82875pt>
 File: figures/conv5.png Graphic file (type png)
  <use figures/conv5.png>
 Package pdftex.def Info: figures/conv5.png used on input line 78.
@@ -735,7 +755,7 @@ Overfull \hbox (42.55527pt too wide) in paragraph at lines 78--79
  []
 
 [8 <./figures/conv3.png> <./figures/conv4.png>]
-<figures/siamese.png, id=62, 763.85374pt x 579.16376pt>
+<figures/siamese.png, id=65, 763.85374pt x 579.16376pt>
 File: figures/siamese.png Graphic file (type png)
 
 <use figures/siamese.png>
@@ -746,7 +766,7 @@ Package pdftex.def Info: figures/siamese.png used on input line 95.
 
  (./methodology.tex
 \relax \fontsize {14.4}{15}\selectfont {Chapter} 3.
-<figures/design.png, id=71, 298.11375pt x 887.315pt>
+<figures/design.png, id=74, 298.11375pt x 887.315pt>
 File: figures/design.png Graphic file (type png)
  <use figures/design.png>
 Package pdftex.def Info: figures/design.png used on input line 10.
@@ -776,20 +796,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--24
 
  []
 
-<figures/methodology.png, id=76, 379.4175pt x 645.41125pt>
+<figures/methodology.png, id=79, 379.4175pt x 645.41125pt>
 File: figures/methodology.png Graphic file (type png)
 
 <use figures/methodology.png>
 Package pdftex.def Info: figures/methodology.png used on input line 32.
 (pdftex.def)             Requested size: 265.59042pt x 451.7848pt.
  [12] [13 <./figures/methodology.png>]
-<figures/face1.jpg, id=84, 256.96pt x 256.96pt>
+<figures/face1.jpg, id=88, 256.96pt x 256.96pt>
 File: figures/face1.jpg Graphic file (type jpg)
  <use figures/face1.jpg>
 Package pdftex.def Info: figures/face1.jpg used on input line 62.
 (pdftex.def)             Requested size: 179.87076pt x 179.87076pt.
 
-<figures/face2.jpg, id=85, 256.96pt x 256.96pt>
+<figures/face2.jpg, id=89, 256.96pt x 256.96pt>
 File: figures/face2.jpg Graphic file (type jpg)
  <use figures/face2.jpg>
 Package pdftex.def Info: figures/face2.jpg used on input line 63.
@@ -801,7 +821,7 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 ) [14
 
  <./figures/face1.jpg> <./figures/face2.jpg>]
-<figures/databaserepresentation.png, id=90, 410.53375pt x 345.29pt>
+<figures/databaserepresentation.png, id=93, 410.53375pt x 345.29pt>
 File: figures/databaserepresentation.png Graphic file (type png)
 
 <use figures/databaserepresentation.png>
@@ -818,13 +838,17 @@ Type  H <return>  for immediate help.
                                                   
 l.117 \end{itemize}
                    
-? 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
 l.117 \end{itemize}
                    
-? 
+Things are pretty mixed up, but I think the worst is over.
+
 
 Overfull \hbox (41.13203pt too wide) in paragraph at lines 128--129
 []\OT1/ptm/m/n/10.95 In line K, train1.txt and train2.txt con-tain re-spec-tive
@@ -834,8 +858,12 @@ ly \  ad-dress/to/file1K.jpg la-belK" and \  ad-dress/to/file2K.jpg
 ! Undefined control sequence.
 l.132 ...r the other to create the required \textt
                                                   {train.txt} and \texttt{te...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-? 
 
 Underfull \hbox (badness 10000) in paragraph at lines 132--133
 
@@ -856,14 +884,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 151--152
 
  []
 
-[17] <figures/logreg.jpg, id=102, 240.9pt x 333.245pt>
+[17] <figures/logreg.jpg, id=105, 240.9pt x 333.245pt>
 File: figures/logreg.jpg Graphic file (type jpg)
 
 <use figures/logreg.jpg>
 Package pdftex.def Info: figures/logreg.jpg used on input line 156.
 (pdftex.def)             Requested size: 168.62883pt x 233.2699pt.
 
-<figures/logregfile.png, id=103, 316.18124pt x 581.17125pt>
+<figures/logregfile.png, id=106, 316.18124pt x 581.17125pt>
 File: figures/logregfile.png Graphic file (type png)
 
 <use figures/logregfile.png>
@@ -877,28 +905,44 @@ Package pdftex.def Info: figures/logregfile.png used on input line 157.
 ! Undefined control sequence.
 l.14 ...or this second scenario. Four files \textt
                                                   {train1.txt}, \textt{train...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-? 
 ! Undefined control sequence.
 l.14 ...rio. Four files \textt{train1.txt}, \textt
                                                   {train2.txt}, \textt{test1...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-? 
 ! Undefined control sequence.
 l.14 ...tt{train1.txt}, \textt{train2.txt}, \textt
                                                   {test1.txt}, and \textt{te...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-? 
 ! Undefined control sequence.
 l.14 ...train2.txt}, \textt{test1.txt}, and \textt
                                                   {test2.txt}, as described ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-? 
 [20
 
 
 
-] <figures/final_net.png, id=115, 1099.10625pt x 268.00125pt>
+] <figures/final_net.png, id=118, 1099.10625pt x 268.00125pt>
 File: figures/final_net.png Graphic file (type png)
 
 <use figures/final_net.png>
@@ -914,14 +958,18 @@ Type  H <return>  for immediate help.
                                                   
 l.40 \end{itemize}
                   
-? 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
 l.40 \end{itemize}
                   
-? 
-<figures/architecture.png, id=116, 742.775pt x 643.40375pt>
+Things are pretty mixed up, but I think the worst is over.
+
+<figures/architecture.png, id=119, 742.775pt x 643.40375pt>
 File: figures/architecture.png Graphic file (type png)
 
 <use figures/architecture.png>
@@ -942,20 +990,24 @@ Type  H <return>  for immediate help.
                                                   
 l.51 \end{itemize}
                   
-? 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
 l.51 \end{itemize}
                   
-? 
+Things are pretty mixed up, but I think the worst is over.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 57--58
 
  []
 
 [22 <./figures/architecture.png>]
-<figures/lfw.png, id=125, 751.80875pt x 313.17pt>
+<figures/lfw.png, id=128, 751.80875pt x 313.17pt>
 File: figures/lfw.png Graphic file (type png)
  <use figures/lfw.png>
 Package pdftex.def Info: figures/lfw.png used on input line 71.
@@ -974,14 +1026,18 @@ Type  H <return>  for immediate help.
                                                   
 l.76 \end{itemize}
                   
-? 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
 l.76 \end{itemize}
                   
-? 
-<figures/ytf.png, id=126, 1043.9pt x 382.42876pt>
+Things are pretty mixed up, but I think the worst is over.
+
+<figures/ytf.png, id=129, 1043.9pt x 382.42876pt>
 File: figures/ytf.png Graphic file (type png)
  <use figures/ytf.png>
 Package pdftex.def Info: figures/ytf.png used on input line 81.
@@ -996,15 +1052,19 @@ Type  H <return>  for immediate help.
                                                   
 l.86 \end{itemize}
                   
-? 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
 l.86 \end{itemize}
                   
-? 
+Things are pretty mixed up, but I think the worst is over.
+
 [23 <./figures/lfw.png> <./figures/ytf.png>]
-<figures/result.png, id=132, 562.1pt x 421.575pt>
+<figures/result.png, id=135, 562.1pt x 421.575pt>
 File: figures/result.png Graphic file (type png)
  <use figures/result.png>
 Package pdftex.def Info: figures/result.png used on input line 103.
@@ -1020,14 +1080,18 @@ Type  H <return>  for immediate help.
                                                   
 l.108 \end{itemize}
                    
-? 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
 l.108 \end{itemize}
                    
-? 
-<figures/result_compared.png, id=136, 694.595pt x 568.1225pt>
+Things are pretty mixed up, but I think the worst is over.
+
+<figures/result_compared.png, id=139, 694.595pt x 568.1225pt>
 File: figures/result_compared.png Graphic file (type png)
 
 <use figures/result_compared.png>
@@ -1043,14 +1107,18 @@ Type  H <return>  for immediate help.
                                                   
 l.119 \end{itemize}
                    
-? 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
 l.119 \end{itemize}
                    
-? 
-<figures/histograms.jpg, id=140, 924.45375pt x 559.08875pt>
+Things are pretty mixed up, but I think the worst is over.
+
+<figures/histograms.jpg, id=144, 924.45375pt x 559.08875pt>
 File: figures/histograms.jpg Graphic file (type jpg)
 
 <use figures/histograms.jpg>
@@ -1071,14 +1139,18 @@ Type  H <return>  for immediate help.
                                                   
 l.130 \end{itemize}
                    
-? 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
 l.130 \end{itemize}
                    
-? 
-<figures/ROC_help.png, id=146, 722.7pt x 542.025pt>
+Things are pretty mixed up, but I think the worst is over.
+
+<figures/ROC_help.png, id=149, 722.7pt x 542.025pt>
 File: figures/ROC_help.png Graphic file (type png)
  <use figures/ROC_help.png>
 Package pdftex.def Info: figures/ROC_help.png used on input line 137.
@@ -1094,13 +1166,17 @@ Type  H <return>  for immediate help.
                                                   
 l.142 \end{itemize}
                    
-? 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
 l.142 \end{itemize}
                    
-? 
+Things are pretty mixed up, but I think the worst is over.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 145--147
 
@@ -1111,7 +1187,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 145--147
                             overlapping
 l.154 \subsection{Face detection & overlapping}
                                                
-? 
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
 [28 <./figures/ROC_help.png>] [29]
 Underfull \hbox (badness 10000) in paragraph at lines 186--189
 
@@ -1122,7 +1204,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 204--205
 
  []
 
-[30] <figures/matrix.png, id=167, 578.16pt x 433.62pt>
+[30] <figures/matrix.png, id=170, 578.16pt x 433.62pt>
 File: figures/matrix.png Graphic file (type png)
 
 <use figures/matrix.png>
@@ -1138,24 +1220,195 @@ Type  H <return>  for immediate help.
                                                   
 l.220 \end{itemize}
                    
-? 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
 l.220 \end{itemize}
                    
-? 
+Things are pretty mixed up, but I think the worst is over.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 224--230
 
  []
 
-[31 <./figures/matrix.png>]) [32] [33]
+[31 <./figures/matrix.png>] [32]
+<figures/jednipat.jpg, id=179, 562.1pt x 421.575pt>
+File: figures/jednipat.jpg Graphic file (type jpg)
+ <use figures/jednipat.jpg>
+Package pdftex.def Info: figures/jednipat.jpg used on input line 256.
+(pdftex.def)             Requested size: 393.46732pt x 295.10048pt.
+
+
+! LaTeX Error: \begin{document} ended by \end{itemize}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.261 \end{itemize}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.261 \end{itemize}
+                   
+Things are pretty mixed up, but I think the worst is over.
+
+<figures/Tee.jpg, id=180, 562.1pt x 421.575pt>
+File: figures/Tee.jpg Graphic file (type jpg)
+ <use figures/Tee.jpg>
+Package pdftex.def Info: figures/Tee.jpg used on input line 276.
+(pdftex.def)             Requested size: 393.46732pt x 295.10048pt.
+ [33 <./figures/jednipat.jpg>]
+
+! LaTeX Error: \begin{document} ended by \end{itemize}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.281 \end{itemize}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.281 \end{itemize}
+                   
+Things are pretty mixed up, but I think the worst is over.
+
+<figures/Tee2.jpg, id=184, 562.1pt x 421.575pt>
+File: figures/Tee2.jpg Graphic file (type jpg)
+ <use figures/Tee2.jpg>
+Package pdftex.def Info: figures/Tee2.jpg used on input line 285.
+(pdftex.def)             Requested size: 393.46732pt x 295.10048pt.
+ [34 <./figures/Tee.jpg> <./figures/Tee2.jpg>]
+
+! LaTeX Error: \begin{document} ended by \end{itemize}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.290 \end{itemize}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.290 \end{itemize}
+                   
+Things are pretty mixed up, but I think the worst is over.
+
+<figures/lowrespic.jpg, id=188, 501.875pt x 501.875pt>
+File: figures/lowrespic.jpg Graphic file (type jpg)
+
+<use figures/lowrespic.jpg>
+Package pdftex.def Info: figures/lowrespic.jpg used on input line 296.
+(pdftex.def)             Requested size: 250.93687pt x 250.93687pt.
+
+
+! LaTeX Error: \begin{document} ended by \end{itemize}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.301 \end{itemize}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.301 \end{itemize}
+                   
+Things are pretty mixed up, but I think the worst is over.
+
+<figures/highrespic.jpg, id=189, 501.875pt x 501.875pt>
+File: figures/highrespic.jpg Graphic file (type jpg)
+
+<use figures/highrespic.jpg>
+Package pdftex.def Info: figures/highrespic.jpg used on input line 305.
+(pdftex.def)             Requested size: 250.93687pt x 250.93687pt.
+ [35
+
+ <./figures/lowrespic.jpg>]
+
+! LaTeX Error: \begin{document} ended by \end{itemize}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.310 \end{itemize}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.310 \end{itemize}
+                   
+Things are pretty mixed up, but I think the worst is over.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--312
+
+ []
+
+<figures/Vasan.jpg, id=193, 562.1pt x 421.575pt>
+File: figures/Vasan.jpg Graphic file (type jpg)
+ <use figures/Vasan.jpg>
+Package pdftex.def Info: figures/Vasan.jpg used on input line 317.
+(pdftex.def)             Requested size: 393.46732pt x 295.10048pt.
+
+[36 <./figures/highrespic.jpg>]
+
+! LaTeX Error: \begin{document} ended by \end{itemize}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.322 \end{itemize}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.322 \end{itemize}
+                   
+Things are pretty mixed up, but I think the worst is over.
+
+) [37 <./figures/Vasan.jpg>]
 \openout2 = `conclusion.aux'.
 
  (./conclusion.tex
 \relax \fontsize {14.4}{15}\selectfont {Chapter} 5.
-[34
+[38
 
 
 
@@ -1173,7 +1426,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--59
 
  []
 
-[35]
+[39]
 Underfull \hbox (badness 10000) in paragraph at lines 62--63
 
  []
@@ -1196,7 +1449,7 @@ Overfull \hbox (65.04196pt too wide) in paragraph at lines 86--86
 /full\_database.txt[] 
  []
 
-[36]
+[40]
 Overfull \hbox (66.33325pt too wide) in paragraph at lines 102--103
 \OT1/ptm/m/n/10.95 To gen-er-ate the file \OT1/pcr/m/n/10.95 src/face[]id/face[
 ]verification[]experiment-master/code/mbk[]pairs.mat 
@@ -1218,7 +1471,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 126--127
 
  []
 
-[37]
+[41]
 Underfull \hbox (badness 10000) in paragraph at lines 145--149
 
  []
@@ -1238,7 +1491,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 162--164
 
  []
 
-[38]
+[42]
 Underfull \hbox (badness 10000) in paragraph at lines 169--170
 
  []
@@ -1248,7 +1501,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 175--176
 
  []
 
-) [39] (./thesis.bbl) [40
+) [43] (./thesis.bbl) [44
 
 
 ] (./thesis.aux (./frontstuff.aux) (./intro.aux)
@@ -1258,13 +1511,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 7876 strings out of 493089
- 112577 string characters out of 6134842
- 224654 words of memory out of 5000000
- 11129 multiletter control sequences out of 15000+600000
+ 7906 strings out of 493089
+ 113198 string characters out of 6134842
+ 224713 words of memory out of 5000000
+ 11153 multiletter control sequences out of 15000+600000
  25927 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,19n,39p,1350b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,19n,39p,1371b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
 xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
@@ -1278,10 +1531,10 @@ xmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2015/texmf-dist
 /fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/typ
 e1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/tim
 es/utmri8a.pfb>
-Output written on thesis.pdf (45 pages, 8713598 bytes).
+Output written on thesis.pdf (50 pages, 8860792 bytes).
 PDF statistics:
- 244 PDF objects out of 1000 (max. 8388607)
- 140 compressed objects within 2 object streams
+ 266 PDF objects out of 1000 (max. 8388607)
+ 151 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 121 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 151 words of extra memory for PDF output out of 10000 (max. 10000000)
 

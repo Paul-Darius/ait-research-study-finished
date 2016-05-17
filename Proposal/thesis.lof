@@ -21,3 +21,9 @@
 \contentsline {figure}{\numberline {4.7}{\ignorespaces Repartition of the positive and negative pairs according to their score.}}{27}
 \contentsline {figure}{\numberline {4.8}{\ignorespaces Calculation of the ROC curve. Extracted from Wikipedia.}}{28}
 \contentsline {figure}{\numberline {4.9}{\ignorespaces The matrix of probabilities.}}{31}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces ROC curve of a test on the first researcher.}}{33}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces ROC curve of the test on the second researcher with a low resolution reference image.}}{34}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces ROC curve of the test on the second researcher with a high resolution reference image.}}{34}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Low resolution reference image.}}{35}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Higher resolution reference image.}}{36}
+\contentsline {figure}{\numberline {4.15}{\ignorespaces ROC curve of the test on the third researcher.}}{37}

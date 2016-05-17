@@ -247,6 +247,76 @@ When the algorithm is finished, the user has access to all faces detected as cri
 \section{A test on a video of the database}
 
 A test of the software has been done on one video of the database where the three researchers appear.
-9848 faces were detected on the video. 47 of them contained one of our researcher. A picture of this researcher was provided and the tests were made for each image and no decision taking algorithm as explained in the section \enquote{Selection of the best test} was used. The threshold determined earlier was a bit smaller than the actual one because of the mistakes contained in the face tracker and thus in the test. For this experience, we selected a threshold of 0.2.\\
-46 out of the 47 pictures of the researchers were detected. The true positive rate is 97.87\%. This score may be quite overestimated by the fact that the given picture of the researcher was very similar to the ones detected in the video. Among the 9801 face images that did not represent our researcher, 762 were detected as positive. Consequently, the false positive rate is 7.77\%. The accuracy of the system on this video in particular is 92.25\%. This result underlines the fact that the global accuracy of the system was underestimated by the errors in the face tracker.\\
-The 9848 detected faces of the video which was 1 minutes and 14 seconds long with 30 frames per second were processed by the neural network and compared with the picture of the researcher in three hours and twenty minutes on a MacBook Pro with a 2.4GHz Intel Core i5 CPU.
+9848 faces were detected on the video. 47 of them contained one of our researcher. A picture of this researcher was provided and the tests were made for each image and no decision taking algorithm as explained in the section \enquote{Selection of the best test} was used. The optimal threshold determined earlier was a bit smaller than the actual one because of the mistakes contained in the face tracker and thus in the test.\\
+Figure 4.10 represents the ROC curve of the experience with the Area Under the Curve and the Equal Error Rate:
+
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[scale=0.7]{figures/jednipat.jpg}  
+  \caption[ROC curve of a test on the first researcher.]{ROC curve of a test on the first researcher.}
+  \protect\label{fig:Siamese}
+\end{figure}
+\FloatBarrier
+\end{itemize}
+
+
+For example, with a threshold of 0.2:
+\begin{itemize}
+\item 46 out of the 47 pictures of the researchers were detected. The true positive rate is 97.87\%. This score may be quite overestimated by the fact that the given picture of the researcher was very similar to the ones detected in the video.
+\item Among the 9801 face images that did not represent our researcher, 762 were detected as positive. Consequently, the false positive rate is 7.77\%.
+\item The accuracy of the system on this video in particular is 92.25\%. This result underlines the fact that the global accuracy of the system was underestimated by the errors in the face tracker.
+\item The 9848 detected faces of the video which was 1 minutes and 14 seconds long with 30 frames per second were processed by the neural network and compared with the picture of the researcher in three hours and twenty minutes on a MacBook Pro with a 2.4GHz Intel Core i5 CPU.
+\end{itemize}
+
+A second identical test was made with the second researcher whose face was detected 53 times on the same video. However, this test on the second researcher was made two times. First with a low resolution for the reference picture. Then with a higher resolution for the reference picture. Figures 4.11 and 4.12 represent the ROC curve of these experiences.
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[scale=0.7]{figures/Tee.jpg}  
+  \caption[ROC curve of the test on the second researcher with a low resolution reference image.]{ROC curve of the test on the second researcher with a low resolution reference image.}
+  \protect\label{fig:Siamese}
+\end{figure}
+\FloatBarrier
+\end{itemize}
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[scale=0.7]{figures/Tee2.jpg}  
+  \caption[ROC curve of the test on the second researcher with a high resolution reference image.]{ROC curve of the test on the second researcher with a high resolution reference image.}
+  \protect\label{fig:Siamese}
+\end{figure}
+\FloatBarrier
+\end{itemize}
+
+Figure 4.13 and 4.14 represent the reference pictures used for this experience.
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[scale=0.5]{figures/lowrespic.jpg}  
+  \caption[Low resolution reference image.]{Low resolution reference image.}
+  \protect\label{fig:Siamese}
+\end{figure}
+\FloatBarrier
+\end{itemize}
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[scale=0.5]{figures/highrespic.jpg}  
+  \caption[Higher resolution reference image.]{Higher resolution reference image.}
+  \protect\label{fig:Siamese}
+\end{figure}
+\FloatBarrier
+\end{itemize}
+The test gives considerable better results with a higher resolution picture.\\
+
+A third identical test was made with the third researcher whose face was detected 19 times on the same video. The ROC curve of this test is given in Figure 4.15.
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[scale=0.7]{figures/Vasan.jpg}  
+  \caption[ROC curve of the test on the third researcher.]{ROC curve of the test on the third researcher.}
+  \protect\label{fig:Siamese}
+\end{figure}
+\FloatBarrier
+\end{itemize}
