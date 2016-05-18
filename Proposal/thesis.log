@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.2.18)  17 MAY 2016 10:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.2.18)  18 MAY 2016 14:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -402,18 +402,18 @@ or  <return>  to continue without it.
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
- (./thesis.aux (./frontstuff.aux) (./intro.aux) (./literature.aux)
-(./methodology.aux
-
-LaTeX Warning: Label `fig:Siamese' multiply defined.
-
-) (./results.aux
+ (./thesis.aux (./frontstuff.aux) (./intro.aux) (./literature.aux
 
 LaTeX Warning: Label `fig:Siamese' multiply defined.
 
 
 LaTeX Warning: Label `fig:mfm' multiply defined.
 
+) (./methodology.aux
+
+LaTeX Warning: Label `fig:Siamese' multiply defined.
+
+) (./results.aux
 
 LaTeX Warning: Label `fig:mfm' multiply defined.
 
@@ -618,14 +618,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 121--1
  [4
 
 ] (./thesis.lof
-Overfull \hbox (6.4375pt too wide) in paragraph at lines 18--18
+Overfull \hbox (6.4375pt too wide) in paragraph at lines 13--13
  [][] []\OT1/ptm/m/n/12 Comparison with other state-of-the-art meth-ods on YTF.
  Ex-tracted 
  []
 
 [5
 
-])
+]
+Overfull \hbox (0.30571pt too wide) in paragraph at lines 27--27
+ [][] []\OT1/ptm/m/n/12 Side face ref-er-ence im-age, which pro-duced the ROC c
+urve shown 
+ []
+
+
+Overfull \hbox (4.97374pt too wide) in paragraph at lines 28--28
+ [][] []\OT1/ptm/m/n/12 Front face ref-er-ence im-age, which pro-duced the ROC 
+curve shown 
+ []
+
+)
 \tf@lof=\write4
 \openout4 = `thesis.lof'.
 
@@ -761,18 +773,140 @@ File: figures/siamese.png Graphic file (type png)
 <use figures/siamese.png>
 Package pdftex.def Info: figures/siamese.png used on input line 95.
 (pdftex.def)             Requested size: 305.53607pt x 231.66139pt.
- [9 <./figures/conv5.png>]) [10 <./figures/siamese.png>]
+ [9 <./figures/conv5.png>]
+<figures/final_net.png, id=70, 1099.10625pt x 268.00125pt>
+File: figures/final_net.png Graphic file (type png)
+
+<use figures/final_net.png>
+Package pdftex.def Info: figures/final_net.png used on input line 112.
+(pdftex.def)             Requested size: 439.6347pt x 107.1986pt.
+
+
+! LaTeX Error: \begin{document} ended by \end{itemize}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.117 \end{itemize}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.117 \end{itemize}
+                   
+Things are pretty mixed up, but I think the worst is over.
+
+<figures/architecture.png, id=71, 742.775pt x 643.40375pt>
+File: figures/architecture.png Graphic file (type png)
+
+<use figures/architecture.png>
+Package pdftex.def Info: figures/architecture.png used on input line 123.
+(pdftex.def)             Requested size: 445.66843pt x 386.04523pt.
+
+Overfull \hbox (4.821pt too wide) in paragraph at lines 123--125
+ [][] 
+ []
+
+[10 <./figures/siamese.png> <./figures/final_net.png>]
+
+! LaTeX Error: \begin{document} ended by \end{itemize}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.128 \end{itemize}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.128 \end{itemize}
+                   
+Things are pretty mixed up, but I think the worst is over.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--135
+
+ []
+
+[11 <./figures/architecture.png>]
+<figures/lfw.png, id=81, 751.80875pt x 313.17pt>
+File: figures/lfw.png Graphic file (type png)
+ <use figures/lfw.png>
+Package pdftex.def Info: figures/lfw.png used on input line 148.
+(pdftex.def)             Requested size: 451.08871pt x 187.90344pt.
+
+Overfull \hbox (10.24129pt too wide) in paragraph at lines 148--150
+ [][] 
+ []
+
+
+! LaTeX Error: \begin{document} ended by \end{itemize}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.153 \end{itemize}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.153 \end{itemize}
+                   
+Things are pretty mixed up, but I think the worst is over.
+
+<figures/ytf.png, id=82, 1043.9pt x 382.42876pt>
+File: figures/ytf.png Graphic file (type png)
+ <use figures/ytf.png>
+Package pdftex.def Info: figures/ytf.png used on input line 158.
+(pdftex.def)             Requested size: 313.17241pt x 114.7295pt.
+
+
+! LaTeX Error: \begin{document} ended by \end{itemize}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.163 \end{itemize}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.163 \end{itemize}
+                   
+Things are pretty mixed up, but I think the worst is over.
+
+[12 <./figures/lfw.png> <./figures/ytf.png>]) [13]
 \openout2 = `methodology.aux'.
 
  (./methodology.tex
 \relax \fontsize {14.4}{15}\selectfont {Chapter} 3.
-<figures/design.png, id=74, 298.11375pt x 887.315pt>
+<figures/design.png, id=92, 298.11375pt x 887.315pt>
 File: figures/design.png Graphic file (type png)
  <use figures/design.png>
 Package pdftex.def Info: figures/design.png used on input line 10.
 (pdftex.def)             Requested size: 149.0565pt x 443.65642pt.
 
-[11
+[14
 
 
 
@@ -796,20 +930,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--24
 
  []
 
-<figures/methodology.png, id=79, 379.4175pt x 645.41125pt>
+<figures/methodology.png, id=97, 379.4175pt x 645.41125pt>
 File: figures/methodology.png Graphic file (type png)
 
 <use figures/methodology.png>
 Package pdftex.def Info: figures/methodology.png used on input line 32.
 (pdftex.def)             Requested size: 265.59042pt x 451.7848pt.
- [12] [13 <./figures/methodology.png>]
-<figures/face1.jpg, id=88, 256.96pt x 256.96pt>
+ [15] [16 <./figures/methodology.png>]
+<figures/face1.jpg, id=105, 256.96pt x 256.96pt>
 File: figures/face1.jpg Graphic file (type jpg)
  <use figures/face1.jpg>
 Package pdftex.def Info: figures/face1.jpg used on input line 62.
 (pdftex.def)             Requested size: 179.87076pt x 179.87076pt.
 
-<figures/face2.jpg, id=89, 256.96pt x 256.96pt>
+<figures/face2.jpg, id=106, 256.96pt x 256.96pt>
 File: figures/face2.jpg Graphic file (type jpg)
  <use figures/face2.jpg>
 Package pdftex.def Info: figures/face2.jpg used on input line 63.
@@ -818,17 +952,17 @@ LaTeX Font Info:    Try loading font information for OT1+pcr on input line 70.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) [14
+) [17
 
  <./figures/face1.jpg> <./figures/face2.jpg>]
-<figures/databaserepresentation.png, id=93, 410.53375pt x 345.29pt>
+<figures/databaserepresentation.png, id=110, 410.53375pt x 345.29pt>
 File: figures/databaserepresentation.png Graphic file (type png)
 
 <use figures/databaserepresentation.png>
 Package pdftex.def Info: figures/databaserepresentation.png used on input line 
 112.
 (pdftex.def)             Requested size: 287.37166pt x 241.70134pt.
- [15]
+ [18]
 
 ! LaTeX Error: \begin{document} ended by \end{itemize}.
 
@@ -869,7 +1003,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 132--133
 
  []
 
-[16 <./figures/databaserepresentation.png>]
+[19 <./figures/databaserepresentation.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 139--140
 
  []
@@ -884,20 +1018,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 151--152
 
  []
 
-[17] <figures/logreg.jpg, id=105, 240.9pt x 333.245pt>
+[20] <figures/logreg.jpg, id=123, 240.9pt x 333.245pt>
 File: figures/logreg.jpg Graphic file (type jpg)
 
 <use figures/logreg.jpg>
 Package pdftex.def Info: figures/logreg.jpg used on input line 156.
 (pdftex.def)             Requested size: 168.62883pt x 233.2699pt.
 
-<figures/logregfile.png, id=106, 316.18124pt x 581.17125pt>
+<figures/logregfile.png, id=124, 316.18124pt x 581.17125pt>
 File: figures/logregfile.png Graphic file (type png)
 
 <use figures/logregfile.png>
 Package pdftex.def Info: figures/logregfile.png used on input line 157.
 (pdftex.def)             Requested size: 126.47025pt x 232.46437pt.
-) [18 <./figures/logreg.jpg> <./figures/logregfile.png>] [19]
+) [21 <./figures/logreg.jpg> <./figures/logregfile.png>] [22]
 \openout2 = `results.aux'.
 
  (./results.tex
@@ -938,16 +1072,16 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[20
+[23
 
 
 
-] <figures/final_net.png, id=118, 1099.10625pt x 268.00125pt>
-File: figures/final_net.png Graphic file (type png)
+] [24] <figures/ROC_help.png, id=138, 722.7pt x 542.025pt>
+File: figures/ROC_help.png Graphic file (type png)
 
-<use figures/final_net.png>
-Package pdftex.def Info: figures/final_net.png used on input line 35.
-(pdftex.def)             Requested size: 439.6347pt x 107.1986pt.
+<use figures/ROC_help.png>
+Package pdftex.def Info: figures/ROC_help.png used on input line 40.
+(pdftex.def)             Requested size: 361.3491pt x 271.01183pt.
 
 
 ! LaTeX Error: \begin{document} ended by \end{itemize}.
@@ -956,7 +1090,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.40 \end{itemize}
+l.45 \end{itemize}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -965,112 +1099,22 @@ or  <return>  to continue without it.
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.40 \end{itemize}
-                  
-Things are pretty mixed up, but I think the worst is over.
-
-<figures/architecture.png, id=119, 742.775pt x 643.40375pt>
-File: figures/architecture.png Graphic file (type png)
-
-<use figures/architecture.png>
-Package pdftex.def Info: figures/architecture.png used on input line 46.
-(pdftex.def)             Requested size: 445.66843pt x 386.04523pt.
-
-Overfull \hbox (4.821pt too wide) in paragraph at lines 46--48
- [][] 
- []
-
-[21 <./figures/final_net.png>]
-
-! LaTeX Error: \begin{document} ended by \end{itemize}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.51 \end{itemize}
-                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Extra \endgroup.
-<recently read> \endgroup 
-                          
-l.51 \end{itemize}
+l.45 \end{itemize}
                   
 Things are pretty mixed up, but I think the worst is over.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 57--58
+Underfull \hbox (badness 10000) in paragraph at lines 48--50
 
  []
 
-[22 <./figures/architecture.png>]
-<figures/lfw.png, id=128, 751.80875pt x 313.17pt>
-File: figures/lfw.png Graphic file (type png)
- <use figures/lfw.png>
-Package pdftex.def Info: figures/lfw.png used on input line 71.
-(pdftex.def)             Requested size: 451.08871pt x 187.90344pt.
-
-Overfull \hbox (10.24129pt too wide) in paragraph at lines 71--73
- [][] 
- []
-
-
-! LaTeX Error: \begin{document} ended by \end{itemize}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.76 \end{itemize}
-                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Extra \endgroup.
-<recently read> \endgroup 
-                          
-l.76 \end{itemize}
-                  
-Things are pretty mixed up, but I think the worst is over.
-
-<figures/ytf.png, id=129, 1043.9pt x 382.42876pt>
-File: figures/ytf.png Graphic file (type png)
- <use figures/ytf.png>
-Package pdftex.def Info: figures/ytf.png used on input line 81.
-(pdftex.def)             Requested size: 313.17241pt x 114.7295pt.
-
-
-! LaTeX Error: \begin{document} ended by \end{itemize}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.86 \end{itemize}
-                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Extra \endgroup.
-<recently read> \endgroup 
-                          
-l.86 \end{itemize}
-                  
-Things are pretty mixed up, but I think the worst is over.
-
-[23 <./figures/lfw.png> <./figures/ytf.png>]
-<figures/result.png, id=135, 562.1pt x 421.575pt>
+<figures/result.png, id=139, 562.1pt x 421.575pt>
 File: figures/result.png Graphic file (type png)
  <use figures/result.png>
-Package pdftex.def Info: figures/result.png used on input line 103.
+Package pdftex.def Info: figures/result.png used on input line 55.
 (pdftex.def)             Requested size: 393.46732pt x 295.10048pt.
 
-[24]
+[25 <./figures/ROC_help.png>]
 
 ! LaTeX Error: \begin{document} ended by \end{itemize}.
 
@@ -1078,8 +1122,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.108 \end{itemize}
-                   
+l.60 \end{itemize}
+                  
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -1087,17 +1131,17 @@ or  <return>  to continue without it.
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.108 \end{itemize}
-                   
+l.60 \end{itemize}
+                  
 Things are pretty mixed up, but I think the worst is over.
 
-<figures/result_compared.png, id=139, 694.595pt x 568.1225pt>
+<figures/result_compared.png, id=145, 694.595pt x 568.1225pt>
 File: figures/result_compared.png Graphic file (type png)
 
 <use figures/result_compared.png>
-Package pdftex.def Info: figures/result_compared.png used on input line 114.
+Package pdftex.def Info: figures/result_compared.png used on input line 66.
 (pdftex.def)             Requested size: 277.83307pt x 227.24496pt.
- [25 <./figures/result.png (PNG copy)>]
+ [26 <./figures/result.png (PNG copy)>]
 
 ! LaTeX Error: \begin{document} ended by \end{itemize}.
 
@@ -1105,8 +1149,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.119 \end{itemize}
-                   
+l.71 \end{itemize}
+                  
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -1114,22 +1158,22 @@ or  <return>  to continue without it.
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.119 \end{itemize}
-                   
+l.71 \end{itemize}
+                  
 Things are pretty mixed up, but I think the worst is over.
 
-<figures/histograms.jpg, id=144, 924.45375pt x 559.08875pt>
+<figures/histograms.jpg, id=149, 924.45375pt x 559.08875pt>
 File: figures/histograms.jpg Graphic file (type jpg)
 
 <use figures/histograms.jpg>
-Package pdftex.def Info: figures/histograms.jpg used on input line 125.
+Package pdftex.def Info: figures/histograms.jpg used on input line 77.
 (pdftex.def)             Requested size: 462.22574pt x 279.54369pt.
 
-Overfull \hbox (21.37831pt too wide) in paragraph at lines 125--127
+Overfull \hbox (21.37831pt too wide) in paragraph at lines 77--79
  [][] 
  []
 
-[26 <./figures/result_compared.png>]
+[27 <./figures/result_compared.png>]
 
 ! LaTeX Error: \begin{document} ended by \end{itemize}.
 
@@ -1137,8 +1181,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.130 \end{itemize}
-                   
+l.82 \end{itemize}
+                  
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -1146,47 +1190,15 @@ or  <return>  to continue without it.
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.130 \end{itemize}
-                   
+l.82 \end{itemize}
+                  
 Things are pretty mixed up, but I think the worst is over.
-
-<figures/ROC_help.png, id=149, 722.7pt x 542.025pt>
-File: figures/ROC_help.png Graphic file (type png)
- <use figures/ROC_help.png>
-Package pdftex.def Info: figures/ROC_help.png used on input line 137.
-(pdftex.def)             Requested size: 361.3491pt x 271.01183pt.
-
-[27 <./figures/histograms.jpg>]
-
-! LaTeX Error: \begin{document} ended by \end{itemize}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.142 \end{itemize}
-                   
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Extra \endgroup.
-<recently read> \endgroup 
-                          
-l.142 \end{itemize}
-                   
-Things are pretty mixed up, but I think the worst is over.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 145--147
-
- []
 
 ! Misplaced alignment tab character &.
 <argument> Face detection &
                             overlapping
-l.154 \subsection{Face detection & overlapping}
-                                               
+l.91 \subsection{Face detection & overlapping}
+                                              
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1194,13 +1206,23 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-[28 <./figures/ROC_help.png>] [29]
-Underfull \hbox (badness 10000) in paragraph at lines 186--189
+[28 <./figures/histograms.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 117--124
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 204--205
+Underfull \hbox (badness 10000) in paragraph at lines 117--124
+
+ []
+
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 125--128
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 143--144
 
  []
 
@@ -1208,7 +1230,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 204--205
 File: figures/matrix.png Graphic file (type png)
 
 <use figures/matrix.png>
-Package pdftex.def Info: figures/matrix.png used on input line 215.
+Package pdftex.def Info: figures/matrix.png used on input line 154.
 (pdftex.def)             Requested size: 404.70924pt x 303.53192pt.
 
 
@@ -1218,7 +1240,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.220 \end{itemize}
+l.159 \end{itemize}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1227,20 +1249,30 @@ or  <return>  to continue without it.
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.220 \end{itemize}
+l.159 \end{itemize}
                    
 Things are pretty mixed up, but I think the worst is over.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 224--230
+Underfull \hbox (badness 10000) in paragraph at lines 163--169
 
  []
 
-[31 <./figures/matrix.png>] [32]
-<figures/jednipat.jpg, id=179, 562.1pt x 421.575pt>
+[31 <./figures/matrix.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 187--193
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 187--193
+
+ []
+
+[32] <figures/jednipat.jpg, id=179, 562.1pt x 421.575pt>
 File: figures/jednipat.jpg Graphic file (type jpg)
- <use figures/jednipat.jpg>
-Package pdftex.def Info: figures/jednipat.jpg used on input line 256.
+
+<use figures/jednipat.jpg>
+Package pdftex.def Info: figures/jednipat.jpg used on input line 197.
 (pdftex.def)             Requested size: 393.46732pt x 295.10048pt.
 
 
@@ -1250,7 +1282,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.261 \end{itemize}
+l.202 \end{itemize}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1259,14 +1291,14 @@ or  <return>  to continue without it.
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.261 \end{itemize}
+l.202 \end{itemize}
                    
 Things are pretty mixed up, but I think the worst is over.
 
 <figures/Tee.jpg, id=180, 562.1pt x 421.575pt>
 File: figures/Tee.jpg Graphic file (type jpg)
  <use figures/Tee.jpg>
-Package pdftex.def Info: figures/Tee.jpg used on input line 276.
+Package pdftex.def Info: figures/Tee.jpg used on input line 217.
 (pdftex.def)             Requested size: 393.46732pt x 295.10048pt.
  [33 <./figures/jednipat.jpg>]
 
@@ -1276,7 +1308,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.281 \end{itemize}
+l.222 \end{itemize}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1285,16 +1317,16 @@ or  <return>  to continue without it.
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.281 \end{itemize}
+l.222 \end{itemize}
                    
 Things are pretty mixed up, but I think the worst is over.
 
 <figures/Tee2.jpg, id=184, 562.1pt x 421.575pt>
 File: figures/Tee2.jpg Graphic file (type jpg)
  <use figures/Tee2.jpg>
-Package pdftex.def Info: figures/Tee2.jpg used on input line 285.
+Package pdftex.def Info: figures/Tee2.jpg used on input line 226.
 (pdftex.def)             Requested size: 393.46732pt x 295.10048pt.
- [34 <./figures/Tee.jpg> <./figures/Tee2.jpg>]
+ [34 <./figures/Tee.jpg>] [35 <./figures/Tee2.jpg>]
 
 ! LaTeX Error: \begin{document} ended by \end{itemize}.
 
@@ -1302,7 +1334,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.290 \end{itemize}
+l.231 \end{itemize}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1311,15 +1343,14 @@ or  <return>  to continue without it.
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.290 \end{itemize}
+l.231 \end{itemize}
                    
 Things are pretty mixed up, but I think the worst is over.
 
-<figures/lowrespic.jpg, id=188, 501.875pt x 501.875pt>
-File: figures/lowrespic.jpg Graphic file (type jpg)
-
-<use figures/lowrespic.jpg>
-Package pdftex.def Info: figures/lowrespic.jpg used on input line 296.
+<figures/sidepic.jpg, id=191, 501.875pt x 501.875pt>
+File: figures/sidepic.jpg Graphic file (type jpg)
+ <use figures/sidepic.jpg>
+Package pdftex.def Info: figures/sidepic.jpg used on input line 237.
 (pdftex.def)             Requested size: 250.93687pt x 250.93687pt.
 
 
@@ -1329,7 +1360,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.301 \end{itemize}
+l.242 \end{itemize}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1338,19 +1369,19 @@ or  <return>  to continue without it.
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.301 \end{itemize}
+l.242 \end{itemize}
                    
 Things are pretty mixed up, but I think the worst is over.
 
-<figures/highrespic.jpg, id=189, 501.875pt x 501.875pt>
-File: figures/highrespic.jpg Graphic file (type jpg)
+<figures/frontpic.jpg, id=192, 501.875pt x 501.875pt>
+File: figures/frontpic.jpg Graphic file (type jpg)
 
-<use figures/highrespic.jpg>
-Package pdftex.def Info: figures/highrespic.jpg used on input line 305.
+<use figures/frontpic.jpg>
+Package pdftex.def Info: figures/frontpic.jpg used on input line 246.
 (pdftex.def)             Requested size: 250.93687pt x 250.93687pt.
- [35
+ [36
 
- <./figures/lowrespic.jpg>]
+ <./figures/sidepic.jpg>]
 
 ! LaTeX Error: \begin{document} ended by \end{itemize}.
 
@@ -1358,7 +1389,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.310 \end{itemize}
+l.251 \end{itemize}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1367,22 +1398,22 @@ or  <return>  to continue without it.
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.310 \end{itemize}
+l.251 \end{itemize}
                    
 Things are pretty mixed up, but I think the worst is over.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 311--312
+Underfull \hbox (badness 10000) in paragraph at lines 252--253
 
  []
 
-<figures/Vasan.jpg, id=193, 562.1pt x 421.575pt>
+<figures/Vasan.jpg, id=196, 562.1pt x 421.575pt>
 File: figures/Vasan.jpg Graphic file (type jpg)
  <use figures/Vasan.jpg>
-Package pdftex.def Info: figures/Vasan.jpg used on input line 317.
+Package pdftex.def Info: figures/Vasan.jpg used on input line 258.
 (pdftex.def)             Requested size: 393.46732pt x 295.10048pt.
 
-[36 <./figures/highrespic.jpg>]
+[37 <./figures/frontpic.jpg>]
 
 ! LaTeX Error: \begin{document} ended by \end{itemize}.
 
@@ -1390,7 +1421,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.322 \end{itemize}
+l.263 \end{itemize}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1399,16 +1430,16 @@ or  <return>  to continue without it.
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.322 \end{itemize}
+l.263 \end{itemize}
                    
 Things are pretty mixed up, but I think the worst is over.
 
-) [37 <./figures/Vasan.jpg>]
+) [38 <./figures/Vasan.jpg>]
 \openout2 = `conclusion.aux'.
 
  (./conclusion.tex
 \relax \fontsize {14.4}{15}\selectfont {Chapter} 5.
-[38
+[39
 
 
 
@@ -1426,7 +1457,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--59
 
  []
 
-[39]
+[40]
 Underfull \hbox (badness 10000) in paragraph at lines 62--63
 
  []
@@ -1449,7 +1480,7 @@ Overfull \hbox (65.04196pt too wide) in paragraph at lines 86--86
 /full\_database.txt[] 
  []
 
-[40]
+[41]
 Overfull \hbox (66.33325pt too wide) in paragraph at lines 102--103
 \OT1/ptm/m/n/10.95 To gen-er-ate the file \OT1/pcr/m/n/10.95 src/face[]id/face[
 ]verification[]experiment-master/code/mbk[]pairs.mat 
@@ -1471,7 +1502,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 126--127
 
  []
 
-[41]
+[42]
 Underfull \hbox (badness 10000) in paragraph at lines 145--149
 
  []
@@ -1491,7 +1522,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 162--164
 
  []
 
-[42]
+[43]
 Underfull \hbox (badness 10000) in paragraph at lines 169--170
 
  []
@@ -1501,7 +1532,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 175--176
 
  []
 
-) [43] (./thesis.bbl) [44
+) [44] (./thesis.bbl) [45
 
 
 ] (./thesis.aux (./frontstuff.aux) (./intro.aux)
@@ -1512,8 +1543,8 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  7906 strings out of 493089
- 113198 string characters out of 6134842
- 224713 words of memory out of 5000000
+ 113178 string characters out of 6134842
+ 224714 words of memory out of 5000000
  11153 multiletter control sequences out of 15000+600000
  25927 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1531,10 +1562,10 @@ xmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2015/texmf-dist
 /fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/typ
 e1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/tim
 es/utmri8a.pfb>
-Output written on thesis.pdf (50 pages, 8860792 bytes).
+Output written on thesis.pdf (51 pages, 8862408 bytes).
 PDF statistics:
- 266 PDF objects out of 1000 (max. 8388607)
- 151 compressed objects within 2 object streams
+ 269 PDF objects out of 1000 (max. 8388607)
+ 153 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  151 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -100,6 +100,70 @@ There are two main schemes for face recognition:
 \end{itemize}
 
 
+\section{Network used in this research}
+
+Wu, He and Sun (2015) published a light convolutional neural network for face verification. Its particularity is that it is extremely light but still reaches state-of-the-art results.
+
+\subsection{Architecture}
+Figure 4.1 describes the architecture of the Wu, He and Sun model.
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[scale=0.4]{figures/final_net.png}  
+  \caption[Architecture of the lightened convolution network. Extracted from Wu, He, Sun, 2015.]{Architecture of the lightened convolution neural network. Extracted from Wu, He, Sun, 2015.}
+  \protect\label{fig:Siamese}
+\end{figure}
+\FloatBarrier
+\end{itemize}
+
+First, as an input, a gray-scale face image is provided. The article suggests the use of two possible models. The one used in this research is built with 4 convolution layer with Max-Feature-Map activation functions, 4 max-pooling layers and 2 fully connected layers. The details are given in Figure 4.2.
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[scale=0.6]{figures/architecture.png}  
+  \protect\label{fig:architecture}
+  \caption[Details of the architecture of the lightened convolutional neural networks. Extracted from Wu, He, Sun (2015).]{Details of the architecture of the lightened convolutional neural networks. Extracted from Wu, He, Sun (2015).}
+\end{figure}
+\FloatBarrier
+\end{itemize}
+
+\FloatBarrier
+
+\subsection{Training}
+
+The network was trained on a GTX980 during two weeks on the CASIA-WebFace dataset.\\
+
+The Dropout algorithm is used for the fully connected layers with a ratio of 0.7. The momentum was set to 0.9, and the weight decay to 5e-4 except for fc2 layer for which the rate is set to 5e-3. The learning rate was set to 1e-3, and its value was reduced step by step to finally reach 5e-5. The parameter initialization for the convolution layers was Xavier and it was Gaussian for the fully connected layers.
+
+\subsection{Runtime performance}
+
+To extract one face image representation on a single core i7-4790, 71ms on the first model and 67ms on the second one are needed. This implies the model can be used in real-time applications.
+
+\subsection{Results}
+
+As said previously, these networks reach state-of-the-art results. They were trained on the CASIA-WebFace database and tested both on LFW and YTF (YouTube Faces Database). The results are given in the next two tables, compared with other state-of-the-art methods.
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[scale=0.6]{figures/lfw.png}  
+  \protect\label{fig:mfm}
+  \caption[Comparison with other state-of-the-art methods on LFW. Extracted from Wu, He, Sun (2015).]{Comparison with other state-of-the-art methods on LFW. Extracted from Wu, He, Sun (2015).}
+\end{figure}
+\FloatBarrier
+\end{itemize}
+
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[scale=0.3]{figures/ytf.png}  
+  \protect\label{fig:mfm}
+  \caption[Comparison with other state-of-the-art methods on YTF. Extracted from Wu, He, Sun (2015).]{Comparison with other state-of-the-art methods on YTF. Extracted from Wu, He, Sun (2015).}
+\end{figure}
+\FloatBarrier
+\end{itemize}
+
+\FloatBarrier
+
 \subsection{Video-Based Face Recognition}
 
 On automated face recognition for surveillance video, a number of articles have been published. They are using a wide range of methods. Liu and Chen (2003) used a Hidden Markov Model for video-based face recognition. Le An, Kafai and Bhanu (2012) used a Dynamic Bayesian Network. Goswami, Bhardwaj, Singh and Vatsa (2014) proposed an interesting methodology. First, an algorithm extracts the most \enquote{memorable} frames in the video. Then, the chosen frame is applied to a deep learning network performing face recognition. This idea provides the state-of-the-art in low false acceptance rates.

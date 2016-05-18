@@ -7,13 +7,13 @@
 \section{Limitations. Possible improvements.}
 Several improvements can be made.
 \begin{itemize}
-\item First, concerning the face detection. The face detection used in this experience has a high rate of false positive. Despite the fact that the neural network we used is particularly efficient, its behavior is a bit unexpectable when the image of a face is compared to something which is not one. Using an other library like dlib with a lower false positive rate would be more efficient. Such a script was written in python, but tests have still to be done.
-\item The second point concerns the face tracking. Though the written algorithm has an acceptable experimental accuracy, other techniques like Mean Shift are known as way more efficient for face tracking.
+\item First, concerning the face detection. The face detection used in these experiments has a high rate of false positives. Despite the fact that the neural network we used is particularly efficient, its behavior is a bit unexpectable when the image of a face is compared to something which is not one. Using an other library like dlib with a lower false positive rate would be more efficient. Such a script was written in python, but tests have still to be done.
+\item The second point concerns face tracking. Though the written algorithm has an acceptable experimental accuracy, other techniques like Mean Shift are known as way more efficient for face tracking.
 \item The last point is that, as mentioned in the previous chapter, the technique used to test whether or not a group of labeled face images should be considered as a criminal or not can be improved. The solution used in this software is not the best solution. The law of large numbers is probably a better solution. It was not implemented here.
 \end{itemize}
 
 \section{How to use this software}
-This section is used as a \texttt{README} text for the project, available on GitHub. The address is:\\ \texttt{http://github.com/Paul-Darius/ait-research-study-finished}\newpage
+This section is used as a \texttt{README} text for the project, available on GitHub. The address is:\\ \texttt{http://github.com/Paul-Darius/ait-research-study-finished}.\newpage
 \FloatBarrier
 
 \subsection{Face detection}
@@ -149,7 +149,7 @@ In \texttt{src/software}:\\
 
 The detected faces will be saved in \texttt{detected/}
 
-\subsection{Informations about the Siamese Network}
+\subsection{Information about the Siamese Network}
 
 The Siamese Network does not work properly. However, you can try to recreate the experience I made by following these intructions:\\
 
